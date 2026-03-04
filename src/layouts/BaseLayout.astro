@@ -1,0 +1,44 @@
+---
+import '../styles/global.css';
+
+export interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <title>{title}</title>
+  </head>
+  <body class="bg-gray-50 text-gray-900">
+    <header class="bg-white shadow-sm">
+      <nav class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
+        <a href="/" class="text-2xl font-bold text-blue-600">🐾 PetFoodLab</a>
+        <div class="space-x-6">
+          <a href="/blog" class="hover:text-blue-600">Reviews</a>
+          <a href="/about" class="hover:text-blue-600">About</a>
+          <a href="/contact" class="hover:text-blue-600">Contact</a>
+        </div>
+      </nav>
+    </header>
+    
+    <main class="max-w-6xl mx-auto px-4 py-8">
+      <slot />
+    </main>
+    
+    <footer class="bg-gray-800 text-white mt-16 py-8">
+      <div class="max-w-6xl mx-auto px-4 text-center">
+        <p>&copy; 2026 PetFoodLab. All rights reserved.</p>
+        <p class="text-gray-400 text-sm mt-2">
+          We independently review pet food products. When you buy through our links, we may earn a commission.
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>
