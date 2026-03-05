@@ -105,9 +105,7 @@ const shareLinks = {
   </button>
 </div>
 
-<script>
-  const url = '{url}';
-  const title = '{title}';
+<script define:vars={{ url, title }}>
 
   // Copy link functionality
   const copyBtn = document.getElementById('copyLinkBtn');

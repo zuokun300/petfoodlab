@@ -24,12 +24,14 @@ const tocHeadings = headings.filter(h => h.depth === 2 || h.depth === 3);
     <ul class="space-y-2">
       {tocHeadings.map((heading) => (
         <li>
-          <a 
+          <a
             href={`#${heading.slug}`}
-            class="block text-sm py-1.5 px-3 rounded-lg transition-all duration-200
-              {heading.depth === 3 ? 'ml-4 text-gray-600 hover:text-blue-600' : 'text-gray-700 font-medium hover:text-blue-600 hover:bg-blue-50'}
-              toc-link
-              {heading.depth === 2 ? 'toc-h2' : 'toc-h3'}"
+            class:list={[
+              'block text-sm py-1.5 px-3 rounded-lg transition-all duration-200 toc-link',
+              heading.depth === 3
+                ? 'ml-4 text-gray-600 hover:text-blue-600 toc-h3'
+                : 'text-gray-700 font-medium hover:text-blue-600 hover:bg-blue-50 toc-h2',
+            ]}
             data-slug={heading.slug}
           >
             {heading.text}
@@ -71,10 +73,12 @@ const tocHeadings = headings.filter(h => h.depth === 2 || h.depth === 3);
         <ul class="space-y-2 mt-4">
           {tocHeadings.map((heading) => (
             <li>
-              <a 
+              <a
                 href={`#${heading.slug}`}
-                class="block text-sm py-2 px-3 rounded-lg transition-colors
-                  {heading.depth === 3 ? 'ml-4 text-gray-600' : 'text-gray-700 font-medium'}"
+                class:list={[
+                  'block text-sm py-2 px-3 rounded-lg transition-colors',
+                  heading.depth === 3 ? 'ml-4 text-gray-600' : 'text-gray-700 font-medium',
+                ]}
               >
                 {heading.text}
               </a>

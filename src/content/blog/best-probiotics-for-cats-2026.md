@@ -1,7 +1,7 @@
 ---
 title: 'Best Probiotics for Cats 2026: Digestive Health Supplements'
 date: '2026-03-04'
-description: 'Best probiotics for cats in 2026. Our experts reviewed 15+ feline probiotic supplements to support your cat's digestive health.'
+description: "Best probiotics for cats in 2026. Our experts reviewed 15+ feline probiotic supplements to support your cat's digestive health."
 category: 'Supplements'
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: 'Best Cat Food 2026: Top 10 Brands Reviewed'
 date: '2026-03-02'
-description: 'Expert reviews of the 10 best cat foods in 2026. We tested 40+ brands to find the top options for your cat's health and happiness.'
+description: "Expert reviews of the 10 best cat foods in 2026. We tested 40+ brands to find the top options for your cat's health and happiness."
 category: 'Cat Food'
 ---
 

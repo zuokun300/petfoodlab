@@ -147,7 +147,7 @@
   }
 
   /* 防止移动端双击缩放 */
-  * {
+  a, button, [role="button"] {
     touch-action: manipulation;
   }
 

@@ -8,9 +8,10 @@ export interface Props {
   date: string;
   category: string;
   description?: string;
+  headings?: Array<{ depth: number; slug: string; text: string }>;
 }
 
-const { title, date, category, description } = Astro.props;
+const { title, date, category, description, headings = [] } = Astro.props;
 const metaDescription = description || `Independent review of ${title.toLowerCase()}. Honest, science-backed pet food recommendations based on ingredient analysis and veterinary research.`;
 
 // 根据分类生成对应的 emoji 和渐变背景
@@ -21,14 +22,7 @@ const categoryStyles = {
   'Guide': { emoji: '📖', gradient: 'from-amber-500 to-amber-700' },
 };
 
-// 默认样式（狗粮）
-const defaultStyle = categoryStyles['Dog Food'];
-
-// 获取当前分类的样式
-const style = categoryStyles[category as keyof typeof categoryStyles] || defaultStyle;
-
-// 获取目录（从 Astro 的 content collections）
-const headings = Astro.props.headings || [];
+const style = categoryStyles[category as keyof typeof categoryStyles] || categoryStyles['Dog Food'];
 ---
 
 <BaseLayout
