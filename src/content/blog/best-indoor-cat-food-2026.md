@@ -30,7 +30,7 @@ Indoor cats need:
 
 **Cons:** Contains grains
 
-[Check Price on Amazon →](#)
+[Check Price on Amazon →](https://www.amazon.com/s?k=hills+science+diet+cat+food&tag=zuokun300-21)
 
 ### 2. Royal Canin Indoor - Best for Hairballs
 
@@ -38,7 +38,7 @@ Indoor cats need:
 
 **Cons:** Premium price
 
-[Check Price on Amazon →](https://amzn.to/4b9YVzm)
+[Check Price on Amazon →](https://www.amazon.com/s?k=hills+science+diet+cat+food&tag=zuokun300-21)
 
 ### 3. Blue Buffalo Indoor - Best Natural
 
@@ -46,7 +46,7 @@ Indoor cats need:
 
 **Cons:** Higher price
 
-[Check Price on Amazon →](https://amzn.to/4r4ZmRf)
+[Check Price on Amazon →](https://www.amazon.com/s?k=hills+science+diet+cat+food&tag=zuokun300-21)
 
 ## FAQ
 

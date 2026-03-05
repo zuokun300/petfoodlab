@@ -53,7 +53,7 @@ Most common allergens:
 
 **Cons:** Contains chicken (common allergen), moderate price
 
-[Check Price on Amazon →](#)
+[Check Price on Amazon →](https://www.amazon.com/s?k=hills+science+diet+cat+food&tag=zuokun300-21)
 
 ### 2. Royal Canin Digestive Care - Best for Severe Issues
 
@@ -61,7 +61,7 @@ Most common allergens:
 
 **Cons:** Contains by-products, premium price
 
-[Check Price on Amazon →](#)
+[Check Price on Amazon →](https://www.amazon.com/s?k=hills+science+diet+cat+food&tag=zuokun300-21)
 
 ### 3. Purina Pro Plan Sensitive Skin & Stomach - Best Value
 
@@ -69,7 +69,7 @@ Most common allergens:
 
 **Cons:** Contains corn, moderate fiber content
 
-[Check Price on Amazon →](#)
+[Check Price on Amazon →](https://www.amazon.com/s?k=hills+science+diet+cat+food&tag=zuokun300-21)
 
 ### 4. Blue Buffalo Basics Limited Ingredient - Best Limited Ingredient
 
@@ -77,7 +77,7 @@ Most common allergens:
 
 **Cons:** Higher price, some dogs may not like taste
 
-[Check Price on Amazon →](#)
+[Check Price on Amazon →](https://www.amazon.com/s?k=hills+science+diet+cat+food&tag=zuokun300-21)
 
 ### 5. Wellness Simple Limited Ingredient - Best Grain-Free
 
@@ -85,7 +85,7 @@ Most common allergens:
 
 **Cons:** Premium price, may need gradual transition
 
-[Check Price on Amazon →](#)
+[Check Price on Amazon →](https://www.amazon.com/s?k=hills+science+diet+cat+food&tag=zuokun300-21)
 
 ## Elimination Diet Guide
 

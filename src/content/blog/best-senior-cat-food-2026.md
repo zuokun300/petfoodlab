@@ -31,7 +31,7 @@ Cats 7+ years need:
 
 **Cons:** Contains grains
 
-[Check Price on Amazon →](#)
+[Check Price on Amazon →](https://www.amazon.com/s?k=hills+science+diet+cat+food&tag=zuokun300-21)
 
 ### 2. Royal Canin Aging Care - Best for Very Senior
 
@@ -39,7 +39,7 @@ Cats 7+ years need:
 
 **Cons:** Premium price
 
-[Check Price on Amazon →](https://amzn.to/4sowN2n)
+[Check Price on Amazon →](https://www.amazon.com/s?k=hills+science+diet+cat+food&tag=zuokun300-21)
 
 ### 3. Blue Buffalo Senior - Best Natural
 
@@ -47,7 +47,7 @@ Cats 7+ years need:
 
 **Cons:** Higher price
 
-[Check Price on Amazon →](https://amzn.to/4r4ZmRf)
+[Check Price on Amazon →](https://www.amazon.com/s?k=hills+science+diet+cat+food&tag=zuokun300-21)
 
 ## FAQ
 

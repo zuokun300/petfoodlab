@@ -31,7 +31,7 @@ After testing 12+ calming treats, here are our top picks for 2026:
 
 **Cons:** May take time to work
 
-[Check Price on Amazon →](#)
+[Check Price on Amazon →](https://www.amazon.com/s?k=zesty+paws&tag=zuokun300-21)
 
 ### 2. VetriScience Composure - Best Vet Recommended
 
@@ -39,7 +39,7 @@ After testing 12+ calming treats, here are our top picks for 2026:
 
 **Cons:** Higher price, smaller chews
 
-[Check Price on Amazon →](https://amzn.to/4raDm7y)
+[Check Price on Amazon →](https://www.amazon.com/s?k=zesty+paws&tag=zuokun300-21)
 
 ### 3. PetHonesty Calming Hemp Chews - Best with Hemp
 
@@ -47,7 +47,7 @@ After testing 12+ calming treats, here are our top picks for 2026:
 
 **Cons:** Hemp may not work for all dogs
 
-[Check Price on Amazon →](#)
+[Check Price on Amazon →](https://www.amazon.com/s?k=zesty+paws&tag=zuokun300-21)
 
 ## Key Ingredients to Look For
 

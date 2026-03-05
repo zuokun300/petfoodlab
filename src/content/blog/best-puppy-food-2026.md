@@ -32,7 +32,7 @@ Puppies have different nutritional needs than adult dogs. They need:
 
 **Cons:** Premium price point
 
-[Check Price on Amazon →](#)
+[Check Price on Amazon →](https://www.amazon.com/s?k=orijen+cat+food&tag=zuokun300-21)
 
 ### 2. Acana Puppy - Best Value
 
@@ -40,7 +40,7 @@ Puppies have different nutritional needs than adult dogs. They need:
 
 **Cons:** Limited protein options
 
-[Check Price on Amazon →](#)
+[Check Price on Amazon →](https://www.amazon.com/s?k=orijen+cat+food&tag=zuokun300-21)
 
 ### 3. Hill's Science Diet Puppy - Best for Sensitive Puppies
 
@@ -48,7 +48,7 @@ Puppies have different nutritional needs than adult dogs. They need:
 
 **Cons:** Contains grains, lower meat content
 
-[Check Price on Amazon →](#)
+[Check Price on Amazon →](https://www.amazon.com/s?k=orijen+cat+food&tag=zuokun300-21)
 
 ### 4. Royal Canin Puppy - Best for Small Breeds
 
@@ -56,7 +56,7 @@ Puppies have different nutritional needs than adult dogs. They need:
 
 **Cons:** Contains by-products, higher price
 
-[Check Price on Amazon →](https://amzn.to/4b9YVzm)
+[Check Price on Amazon →](https://www.amazon.com/s?k=orijen+cat+food&tag=zuokun300-21)
 
 ### 5. Wellness CORE Puppy - Best Grain-Free
 
@@ -64,7 +64,7 @@ Puppies have different nutritional needs than adult dogs. They need:
 
 **Cons:** Some dogs may experience gas during transition
 
-[Check Price on Amazon →](https://amzn.to/4l9JSdv)
+[Check Price on Amazon →](https://www.amazon.com/s?k=orijen+cat+food&tag=zuokun300-21)
 
 ## Puppy Feeding Guide
 

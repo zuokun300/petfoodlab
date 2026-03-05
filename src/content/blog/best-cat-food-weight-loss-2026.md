@@ -30,7 +30,7 @@ Signs:
 
 **Cons:** Premium price
 
-[Check Price on Amazon →](#)
+[Check Price on Amazon →](https://www.amazon.com/s?k=hills+science+diet+cat+food&tag=zuokun300-21)
 
 ### 2. Royal Canin Satiety - Best for Appetite
 
@@ -38,7 +38,7 @@ Signs:
 
 **Cons:** Contains by-products
 
-[Check Price on Amazon →](#)
+[Check Price on Amazon →](https://www.amazon.com/s?k=hills+science+diet+cat+food&tag=zuokun300-21)
 
 ### 3. Purina Pro Plan Weight Management - Best Value
 
@@ -46,7 +46,7 @@ Signs:
 
 **Cons:** Contains corn
 
-[Check Price on Amazon →](#)
+[Check Price on Amazon →](https://www.amazon.com/s?k=hills+science+diet+cat+food&tag=zuokun300-21)
 
 ## FAQ
 

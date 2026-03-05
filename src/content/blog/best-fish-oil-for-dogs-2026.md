@@ -33,7 +33,7 @@ Omega-3 fatty acids (EPA and DHA) provide:
 
 **Cons:** Premium price, liquid form only
 
-[Check Price on Amazon →](#)
+[Check Price on Amazon →](https://www.amazon.com/s?k=zesty+paws&tag=zuokun300-21)
 
 ### 2. Grizzly Salmon Oil - Best Value
 
@@ -41,7 +41,7 @@ Omega-3 fatty acids (EPA and DHA) provide:
 
 **Cons:** Strong fishy smell, some dogs may not like taste
 
-[Check Price on Amazon →](https://amzn.to/4racgh2)
+[Check Price on Amazon →](https://www.amazon.com/s?k=zesty+paws&tag=zuokun300-21)
 
 ### 3. Zesty Paws Omega Bites - Best Tasty
 
@@ -49,7 +49,7 @@ Omega-3 fatty acids (EPA and DHA) provide:
 
 **Cons:** Lower EPA/DHA per serving, contains fillers
 
-[Check Price on Amazon →](#)
+[Check Price on Amazon →](https://www.amazon.com/s?k=zesty+paws&tag=zuokun300-21)
 
 ### 4. Nutramax Welactin - Best for Potency
 
@@ -57,7 +57,7 @@ Omega-3 fatty acids (EPA and DHA) provide:
 
 **Cons:** Expensive, small bottle size
 
-[Check Price on Amazon →](#)
+[Check Price on Amazon →](https://www.amazon.com/s?k=zesty+paws&tag=zuokun300-21)
 
 ### 5. Vet's Best Omega-3 - Best Budget
 
@@ -65,7 +65,7 @@ Omega-3 fatty acids (EPA and DHA) provide:
 
 **Cons:** Lower quality sourcing, moderate potency
 
-[Check Price on Amazon →](#)
+[Check Price on Amazon →](https://www.amazon.com/s?k=zesty+paws&tag=zuokun300-21)
 
 ## Dosage Guide
 

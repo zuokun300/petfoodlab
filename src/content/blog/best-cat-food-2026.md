@@ -33,7 +33,7 @@ We evaluate cat food based on:
 
 **Cons:** Subscription only, premium price
 
-[Check Price →](#)
+[Check Price on Amazon →](https://www.amazon.com/s?k=orijen+cat+food&tag=zuokun300-21)
 
 ### 2. Orijen Cat & Kitten - Best Dry Food
 
@@ -41,7 +41,7 @@ We evaluate cat food based on:
 
 **Cons:** High price point
 
-[Check Price on Amazon →](#)
+[Check Price on Amazon →](https://www.amazon.com/s?k=orijen+cat+food&tag=zuokun300-21)
 
 ### 3. Hill's Science Diet - Best for Senior Cats
 
@@ -49,7 +49,7 @@ We evaluate cat food based on:
 
 **Cons:** Contains grains, lower meat content
 
-[Check Price on Amazon →](#)
+[Check Price on Amazon →](https://www.amazon.com/s?k=orijen+cat+food&tag=zuokun300-21)
 
 ## Buyer's Guide
 

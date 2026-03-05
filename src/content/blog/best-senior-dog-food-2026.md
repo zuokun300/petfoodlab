@@ -33,7 +33,7 @@ As dogs age (typically 7+ years), their nutritional needs change:
 
 **Cons:** Contains grains, moderate protein content
 
-[Check Price on Amazon →](https://amzn.to/4rW7mp2)
+[Check Price on Amazon →](https://www.amazon.com/s?k=hills+science+diet+cat+food&tag=zuokun300-21)
 
 ### 2. Royal Canin Aging Care - Best for Very Senior Dogs
 
@@ -41,7 +41,7 @@ As dogs age (typically 7+ years), their nutritional needs change:
 
 **Cons:** Premium price, contains by-products
 
-[Check Price on Amazon →](https://amzn.to/4sowN2n)
+[Check Price on Amazon →](https://www.amazon.com/s?k=hills+science+diet+cat+food&tag=zuokun300-21)
 
 ### 3. Blue Buffalo Life Protection Senior - Best Natural
 
@@ -49,7 +49,7 @@ As dogs age (typically 7+ years), their nutritional needs change:
 
 **Cons:** Higher price, some dogs may not like the bits
 
-[Check Price on Amazon →](https://amzn.to/4r4ZmRf)
+[Check Price on Amazon →](https://www.amazon.com/s?k=hills+science+diet+cat+food&tag=zuokun300-21)
 
 ### 4. Purina Pro Plan Bright Mind Senior - Best for Cognitive Health
 
@@ -57,7 +57,7 @@ As dogs age (typically 7+ years), their nutritional needs change:
 
 **Cons:** Contains corn, moderate fat content
 
-[Check Price on Amazon →](#)
+[Check Price on Amazon →](https://www.amazon.com/s?k=hills+science+diet+cat+food&tag=zuokun300-21)
 
 ### 5. Wellness CORE Senior - Best Grain-Free
 
@@ -65,7 +65,7 @@ As dogs age (typically 7+ years), their nutritional needs change:
 
 **Cons:** Premium price, may be too rich for some seniors
 
-[Check Price on Amazon →](#)
+[Check Price on Amazon →](https://www.amazon.com/s?k=hills+science+diet+cat+food&tag=zuokun300-21)
 
 ## When to Switch to Senior Food
 

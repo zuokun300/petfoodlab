@@ -33,7 +33,7 @@ Kittens have unique nutritional needs:
 
 **Cons:** Contains by-products, premium price
 
-[Check Price on Amazon →](https://amzn.to/4rSlekc)
+[Check Price on Amazon →](https://www.amazon.com/s?k=hills+science+diet+cat+food&tag=zuokun300-21)
 
 ### 2. Hill's Science Diet Kitten - Best for Digestion
 
@@ -41,7 +41,7 @@ Kittens have unique nutritional needs:
 
 **Cons:** Contains grains, moderate protein content
 
-[Check Price on Amazon →](https://amzn.to/4l6EXKi)
+[Check Price on Amazon →](https://www.amazon.com/s?k=hills+science+diet+cat+food&tag=zuokun300-21)
 
 ### 3. Blue Buffalo Kitten - Best Natural
 
@@ -49,7 +49,7 @@ Kittens have unique nutritional needs:
 
 **Cons:** Higher price, some kittens may not like the bits
 
-[Check Price on Amazon →](https://amzn.to/40blIFY)
+[Check Price on Amazon →](https://www.amazon.com/s?k=hills+science+diet+cat+food&tag=zuokun300-21)
 
 ### 4. Wellness CORE Kitten - Best Grain-Free
 
@@ -57,7 +57,7 @@ Kittens have unique nutritional needs:
 
 **Cons:** Premium price, may cause gas during transition
 
-[Check Price on Amazon →](#)
+[Check Price on Amazon →](https://www.amazon.com/s?k=hills+science+diet+cat+food&tag=zuokun300-21)
 
 ### 5. Purina Pro Plan Kitten - Best Value
 
@@ -65,7 +65,7 @@ Kittens have unique nutritional needs:
 
 **Cons:** Contains corn and wheat, artificial colors
 
-[Check Price on Amazon →](https://amzn.to/4sjeprA)
+[Check Price on Amazon →](https://www.amazon.com/s?k=hills+science+diet+cat+food&tag=zuokun300-21)
 
 ## Kitten Feeding Schedule
 

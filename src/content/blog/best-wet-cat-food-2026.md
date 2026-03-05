@@ -31,7 +31,7 @@ Cats benefit from wet food because:
 
 **Cons:** Subscription only
 
-[Check Price →](#)
+[Check Price on Amazon →](https://www.amazon.com/s?k=hills+science+diet+cat+food&tag=zuokun300-21)
 
 ### 2. Hill's Science Diet Wet - Best Canned
 
@@ -39,7 +39,7 @@ Cats benefit from wet food because:
 
 **Cons:** Contains grains
 
-[Check Price on Amazon →](#)
+[Check Price on Amazon →](https://www.amazon.com/s?k=hills+science+diet+cat+food&tag=zuokun300-21)
 
 ### 3. Fancy Feast Classic - Best Budget
 
@@ -47,7 +47,7 @@ Cats benefit from wet food because:
 
 **Cons:** Lower quality ingredients
 
-[Check Price on Amazon →](#)
+[Check Price on Amazon →](https://www.amazon.com/s?k=hills+science+diet+cat+food&tag=zuokun300-21)
 
 ## FAQ
 

@@ -30,7 +30,7 @@ After testing 10+ cat probiotic supplements, here are our top picks for 2026:
 
 **Cons:** Single-strain formula
 
-[Check Price on Amazon →](#)
+[Check Price on Amazon →](https://www.amazon.com/s?k=purina+pro+plan+cat+food&tag=zuokun300-21)
 
 ### 2. Nutramax Proviable - Best Multi-Strain
 
@@ -38,7 +38,7 @@ After testing 10+ cat probiotic supplements, here are our top picks for 2026:
 
 **Cons:** Higher price
 
-[Check Price on Amazon →](https://amzn.to/3OYWrw8)
+[Check Price on Amazon →](https://www.amazon.com/s?k=purina+pro+plan+cat+food&tag=zuokun300-21)
 
 ### 3. Pet Ultimates Probiotics - Best Powder
 
@@ -46,7 +46,7 @@ After testing 10+ cat probiotic supplements, here are our top picks for 2026:
 
 **Cons:** Some cats may not like taste
 
-[Check Price on Amazon →](#)
+[Check Price on Amazon →](https://www.amazon.com/s?k=purina+pro+plan+cat+food&tag=zuokun300-21)
 
 ## FAQ
 

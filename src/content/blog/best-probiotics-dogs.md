@@ -23,7 +23,7 @@ After testing 20+ dog probiotic supplements, here are our top picks:
 
 **Cons:** Single-strain formula
 
-[Check Price on Amazon →](#)
+[Check Price on Amazon →](https://www.amazon.com/s?k=purina+pro+plan+cat+food&tag=zuokun300-21)
 
 ### 2. Nutramax Proviable - Best Multi-Strain
 
@@ -31,7 +31,7 @@ After testing 20+ dog probiotic supplements, here are our top picks:
 
 **Cons:** Higher price point
 
-[Check Price on Amazon →](https://amzn.to/3PgVQWF)
+[Check Price on Amazon →](https://www.amazon.com/s?k=purina+pro+plan+cat+food&tag=zuokun300-21)
 
 ### 3. Zesty Paws Probiotic Bites - Best Tasty
 
@@ -39,7 +39,7 @@ After testing 20+ dog probiotic supplements, here are our top picks:
 
 **Cons:** Lower CFU count
 
-[Check Price on Amazon →](#)
+[Check Price on Amazon →](https://www.amazon.com/s?k=purina+pro+plan+cat+food&tag=zuokun300-21)
 
 ## What to Look for
 

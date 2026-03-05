@@ -43,7 +43,7 @@ Obesity affects 60% of dogs and can lead to:
 
 **Cons:** Premium price, transition period needed
 
-[Check Price on Amazon →](#)
+[Check Price on Amazon →](https://www.amazon.com/s?k=hills+science+diet+cat+food&tag=zuokun300-21)
 
 ### 2. Royal Canin Satiety Support - Best for Appetite Control
 
@@ -51,7 +51,7 @@ Obesity affects 60% of dogs and can lead to:
 
 **Cons:** Contains by-products, expensive
 
-[Check Price on Amazon →](#)
+[Check Price on Amazon →](https://www.amazon.com/s?k=hills+science+diet+cat+food&tag=zuokun300-21)
 
 ### 3. Purina Pro Plan Weight Management - Best Value
 
@@ -59,7 +59,7 @@ Obesity affects 60% of dogs and can lead to:
 
 **Cons:** Contains corn and wheat, moderate fiber
 
-[Check Price on Amazon →](#)
+[Check Price on Amazon →](https://www.amazon.com/s?k=hills+science+diet+cat+food&tag=zuokun300-21)
 
 ### 4. Blue Buffalo Weight Control - Best Natural
 
@@ -67,7 +67,7 @@ Obesity affects 60% of dogs and can lead to:
 
 **Cons:** Higher price, some dogs may not like taste
 
-[Check Price on Amazon →](#)
+[Check Price on Amazon →](https://www.amazon.com/s?k=hills+science+diet+cat+food&tag=zuokun300-21)
 
 ### 5. Wellness CORE Weight Management - Best Grain-Free
 
@@ -75,7 +75,7 @@ Obesity affects 60% of dogs and can lead to:
 
 **Cons:** Premium price, may need gradual transition
 
-[Check Price on Amazon →](#)
+[Check Price on Amazon →](https://www.amazon.com/s?k=hills+science+diet+cat+food&tag=zuokun300-21)
 
 ## Weight Loss Tips
 

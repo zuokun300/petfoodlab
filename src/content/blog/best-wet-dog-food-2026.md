@@ -31,7 +31,7 @@ After testing 20+ wet dog food brands, here are our top picks for 2026:
 
 **Cons:** Subscription only, premium price
 
-[Check Price →](#)
+[Check Price on Amazon →](https://www.amazon.com/s?k=hills+science+diet+cat+food&tag=zuokun300-21)
 
 ### 2. Hill's Science Diet Wet - Best Canned
 
@@ -39,7 +39,7 @@ After testing 20+ wet dog food brands, here are our top picks for 2026:
 
 **Cons:** Contains grains, moderate price
 
-[Check Price on Amazon →](#)
+[Check Price on Amazon →](https://www.amazon.com/s?k=hills+science+diet+cat+food&tag=zuokun300-21)
 
 ### 3. Blue Buffalo Wet Food - Best Natural
 
@@ -47,7 +47,7 @@ After testing 20+ wet dog food brands, here are our top picks for 2026:
 
 **Cons:** Higher price per serving
 
-[Check Price on Amazon →](#)
+[Check Price on Amazon →](https://www.amazon.com/s?k=hills+science+diet+cat+food&tag=zuokun300-21)
 
 ## FAQ
 
