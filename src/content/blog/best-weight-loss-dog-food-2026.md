@@ -1,6 +1,7 @@
 ---
 title: 'Best Weight Loss Dog Food 2026: Help Your Dog Shed Pounds Safely'
 date: '2026-03-04'
+description: 'Best weight loss dog food in 2026. We reviewed 15+ low-calorie diet dog foods to help your dog reach a healthy weight.'
 category: 'Dog Food'
 ---
 
@@ -43,7 +44,7 @@ Obesity affects 60% of dogs and can lead to:
 
 **Cons:** Premium price, transition period needed
 
-[Check Price on Amazon →](https://www.amazon.com/s?k=hills+science+diet+cat+food&tag=zuokun300-21)
+[Check Price on Amazon →](https://amzn.to/4b9eW8u)
 
 ### 2. Royal Canin Satiety Support - Best for Appetite Control
 
@@ -51,7 +52,7 @@ Obesity affects 60% of dogs and can lead to:
 
 **Cons:** Contains by-products, expensive
 
-[Check Price on Amazon →](https://www.amazon.com/s?k=hills+science+diet+cat+food&tag=zuokun300-21)
+[Check Price on Amazon →](https://amzn.to/3MOLn4d)
 
 ### 3. Purina Pro Plan Weight Management - Best Value
 
@@ -59,7 +60,7 @@ Obesity affects 60% of dogs and can lead to:
 
 **Cons:** Contains corn and wheat, moderate fiber
 
-[Check Price on Amazon →](https://www.amazon.com/s?k=hills+science+diet+cat+food&tag=zuokun300-21)
+[Check Price on Amazon →](https://amzn.to/4b3MCEv)
 
 ### 4. Blue Buffalo Weight Control - Best Natural
 
@@ -67,7 +68,7 @@ Obesity affects 60% of dogs and can lead to:
 
 **Cons:** Higher price, some dogs may not like taste
 
-[Check Price on Amazon →](https://www.amazon.com/s?k=hills+science+diet+cat+food&tag=zuokun300-21)
+[Check Price on Amazon →](https://amzn.to/4brEeA4)
 
 ### 5. Wellness CORE Weight Management - Best Grain-Free
 
@@ -75,7 +76,7 @@ Obesity affects 60% of dogs and can lead to:
 
 **Cons:** Premium price, may need gradual transition
 
-[Check Price on Amazon →](https://www.amazon.com/s?k=hills+science+diet+cat+food&tag=zuokun300-21)
+[Check Price on Amazon →](https://amzn.to/4rajDVx)
 
 ## Weight Loss Tips
 

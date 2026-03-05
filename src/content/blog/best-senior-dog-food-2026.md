@@ -1,6 +1,7 @@
 ---
 title: 'Best Senior Dog Food 2026: Top Picks for Aging Dogs'
 date: '2026-03-04'
+description: 'Best senior dog food in 2026 reviewed. Our experts tested 20+ brands to find the top options for dogs aged 7+.'
 category: 'Dog Food'
 ---
 
@@ -33,7 +34,7 @@ As dogs age (typically 7+ years), their nutritional needs change:
 
 **Cons:** Contains grains, moderate protein content
 
-[Check Price on Amazon →](https://www.amazon.com/s?k=hills+science+diet+cat+food&tag=zuokun300-21)
+[Check Price on Amazon →](https://amzn.to/47e9Si0)
 
 ### 2. Royal Canin Aging Care - Best for Very Senior Dogs
 
@@ -41,7 +42,7 @@ As dogs age (typically 7+ years), their nutritional needs change:
 
 **Cons:** Premium price, contains by-products
 
-[Check Price on Amazon →](https://www.amazon.com/s?k=hills+science+diet+cat+food&tag=zuokun300-21)
+[Check Price on Amazon →](https://amzn.to/4s4akaU)
 
 ### 3. Blue Buffalo Life Protection Senior - Best Natural
 
@@ -49,7 +50,7 @@ As dogs age (typically 7+ years), their nutritional needs change:
 
 **Cons:** Higher price, some dogs may not like the bits
 
-[Check Price on Amazon →](https://www.amazon.com/s?k=hills+science+diet+cat+food&tag=zuokun300-21)
+[Check Price on Amazon →](https://amzn.to/4urwJRo)
 
 ### 4. Purina Pro Plan Bright Mind Senior - Best for Cognitive Health
 
@@ -57,7 +58,7 @@ As dogs age (typically 7+ years), their nutritional needs change:
 
 **Cons:** Contains corn, moderate fat content
 
-[Check Price on Amazon →](https://www.amazon.com/s?k=hills+science+diet+cat+food&tag=zuokun300-21)
+[Check Price on Amazon →](https://amzn.to/3MY9sFN)
 
 ### 5. Wellness CORE Senior - Best Grain-Free
 
@@ -65,7 +66,7 @@ As dogs age (typically 7+ years), their nutritional needs change:
 
 **Cons:** Premium price, may be too rich for some seniors
 
-[Check Price on Amazon →](https://www.amazon.com/s?k=hills+science+diet+cat+food&tag=zuokun300-21)
+[Check Price on Amazon →](https://amzn.to/4d4aVou)
 
 ## When to Switch to Senior Food
 

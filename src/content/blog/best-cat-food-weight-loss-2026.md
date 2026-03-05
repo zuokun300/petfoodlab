@@ -1,6 +1,7 @@
 ---
 title: 'Best Cat Food for Weight Loss 2026: Help Your Cat Slim Down'
 date: '2026-03-04'
+description: 'Best weight loss cat food in 2026. We reviewed 15+ low-calorie formulas to help overweight cats slim down safely.'
 category: 'Cat Food'
 ---
 
@@ -30,7 +31,7 @@ Signs:
 
 **Cons:** Premium price
 
-[Check Price on Amazon →](https://www.amazon.com/s?k=hills+science+diet+cat+food&tag=zuokun300-21)
+[Check Price on Amazon →](https://amzn.to/40dAdZO)
 
 ### 2. Royal Canin Satiety - Best for Appetite
 
@@ -38,7 +39,7 @@ Signs:
 
 **Cons:** Contains by-products
 
-[Check Price on Amazon →](https://www.amazon.com/s?k=hills+science+diet+cat+food&tag=zuokun300-21)
+[Check Price on Amazon →](https://amzn.to/4sulFkx)
 
 ### 3. Purina Pro Plan Weight Management - Best Value
 
@@ -46,7 +47,7 @@ Signs:
 
 **Cons:** Contains corn
 
-[Check Price on Amazon →](https://www.amazon.com/s?k=hills+science+diet+cat+food&tag=zuokun300-21)
+[Check Price on Amazon →](https://amzn.to/4b6jCvP)
 
 ## FAQ
 

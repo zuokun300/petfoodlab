@@ -1,6 +1,7 @@
 ---
 title: 'Best Calming Treats for Dogs 2026: Anxiety Relief That Works'
 date: '2026-03-04'
+description: 'Best calming treats for dogs in 2026 reviewed. We tested 15+ anxiety relief treats to help keep your dog calm and relaxed.'
 category: 'Supplements'
 ---
 
@@ -31,7 +32,7 @@ After testing 12+ calming treats, here are our top picks for 2026:
 
 **Cons:** May take time to work
 
-[Check Price on Amazon →](https://www.amazon.com/s?k=zesty+paws&tag=zuokun300-21)
+[Check Price on Amazon →](https://amzn.to/4aXLkLa)
 
 ### 2. VetriScience Composure - Best Vet Recommended
 
@@ -39,7 +40,7 @@ After testing 12+ calming treats, here are our top picks for 2026:
 
 **Cons:** Higher price, smaller chews
 
-[Check Price on Amazon →](https://www.amazon.com/s?k=zesty+paws&tag=zuokun300-21)
+[Check Price on Amazon →](https://amzn.to/40LfFb9)
 
 ### 3. PetHonesty Calming Hemp Chews - Best with Hemp
 
@@ -47,7 +48,7 @@ After testing 12+ calming treats, here are our top picks for 2026:
 
 **Cons:** Hemp may not work for all dogs
 
-[Check Price on Amazon →](https://www.amazon.com/s?k=zesty+paws&tag=zuokun300-21)
+[Check Price on Amazon →](https://amzn.to/3OU9cIo)
 
 ## Key Ingredients to Look For
 

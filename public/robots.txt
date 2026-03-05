@@ -5,7 +5,7 @@ User-agent: *
 Allow: /
 
 # Sitemap
-Sitemap: https://petfoodlab.it.com/sitemap.xml
+Sitemap: https://petfoodlab.it.com/sitemap-index.xml
 
 # Crawl-delay for polite crawling
 Crawl-delay: 1

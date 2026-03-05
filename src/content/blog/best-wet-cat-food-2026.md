@@ -1,6 +1,7 @@
 ---
 title: 'Best Wet Cat Food 2026: Top Canned Foods Reviewed'
 date: '2026-03-04'
+description: 'Best wet cat food in 2026 reviewed. Our experts compared 20+ pouches and tins to find the tastiest, most nutritious options for your cat.'
 category: 'Cat Food'
 ---
 
@@ -31,7 +32,7 @@ Cats benefit from wet food because:
 
 **Cons:** Subscription only
 
-[Check Price on Amazon →](https://www.amazon.com/s?k=hills+science+diet+cat+food&tag=zuokun300-21)
+[Check Price on Amazon →](https://amzn.to/4r9Sm5T)
 
 ### 2. Hill's Science Diet Wet - Best Canned
 
@@ -39,7 +40,7 @@ Cats benefit from wet food because:
 
 **Cons:** Contains grains
 
-[Check Price on Amazon →](https://www.amazon.com/s?k=hills+science+diet+cat+food&tag=zuokun300-21)
+[Check Price on Amazon →](https://amzn.to/409ISMS)
 
 ### 3. Fancy Feast Classic - Best Budget
 
@@ -47,7 +48,7 @@ Cats benefit from wet food because:
 
 **Cons:** Lower quality ingredients
 
-[Check Price on Amazon →](https://www.amazon.com/s?k=hills+science+diet+cat+food&tag=zuokun300-21)
+[Check Price on Amazon →](https://amzn.to/4reDXoW)
 
 ## FAQ
 

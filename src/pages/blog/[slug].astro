@@ -14,6 +14,6 @@ const { entry } = Astro.props;
 const { Content } = await entry.render();
 ---
 
-<BlogPost title={entry.data.title} date={entry.data.date} category={entry.data.category}>
+<BlogPost title={entry.data.title} date={entry.data.date} category={entry.data.category} description={entry.data.description}>
   <Content />
 </BlogPost>

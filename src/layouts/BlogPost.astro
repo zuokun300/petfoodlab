@@ -7,9 +7,11 @@ export interface Props {
   title: string;
   date: string;
   category: string;
+  description?: string;
 }
 
-const { title, date, category } = Astro.props;
+const { title, date, category, description } = Astro.props;
+const metaDescription = description || `Independent review of ${title.toLowerCase()}. Honest, science-backed pet food recommendations based on ingredient analysis and veterinary research.`;
 
 // 根据分类生成对应的 emoji 和渐变背景
 const categoryStyles = {
@@ -29,46 +31,36 @@ const style = categoryStyles[category as keyof typeof categoryStyles] || default
 const headings = Astro.props.headings || [];
 ---
 
-<BaseLayout 
+<BaseLayout
   title={`${title} | PetFoodLab`}
-  description={`Independent review of ${title.toLowerCase()}. We provide honest, science-backed pet food recommendations based on ingredient analysis, customer feedback, and veterinary research.`}
-  image={`https://petfoodlab.it.com/og-default.png`}
+  description={metaDescription}
   type="article"
+  publishedTime={date}
+  modifiedTime={date}
+  category={category}
 >
   <div class="relative">
-    <!-- Review Schema -->
-    <script type="application/ld+json">
-      {JSON.stringify({
-        "@context": "https://schema.org",
-        "@type": "Article",
-        "headline": title,
-        "description": `Independent review of ${title.toLowerCase()}`,
-        "image": "https://petfoodlab.it.com/og-default.png",
-        "datePublished": date,
-        "dateModified": date,
-        "author": {
-          "@type": "Organization",
-          "name": "PetFoodLab Team",
-          "url": "https://petfoodlab.it.com"
-        },
-        "publisher": {
-          "@type": "Organization",
-          "name": "PetFoodLab",
-          "logo": {
-            "@type": "ImageObject",
-            "url": "https://petfoodlab.it.com/logo.png"
-          }
-        },
-        "mainEntityOfPage": {
-          "@type": "WebPage",
-          "@id": Astro.url?.href
-        },
-        "articleSection": category
-      })}
-    </script>
+    <!-- BreadcrumbList Schema -->
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://petfoodlab.it.com" },
+        { "@type": "ListItem", "position": 2, "name": "Reviews", "item": "https://petfoodlab.it.com/blog" },
+        { "@type": "ListItem", "position": 3, "name": title, "item": Astro.url?.href }
+      ]
+    })} />
 
     <!-- Main Content -->
     <article class="max-w-4xl mx-auto py-12 px-4 sm:px-6">
+      <!-- Breadcrumb -->
+      <nav aria-label="Breadcrumb" class="mb-8 text-sm text-gray-500 flex items-center gap-2">
+        <a href="/" class="hover:text-blue-600 transition-colors">Home</a>
+        <span>›</span>
+        <a href="/blog" class="hover:text-blue-600 transition-colors">Reviews</a>
+        <span>›</span>
+        <span class="text-gray-700 font-medium line-clamp-1">{title}</span>
+      </nav>
       <!-- Article Header with Hero Image -->
       <header class="mb-12">
         <!-- Hero Image (Gradient Background + Emoji) -->

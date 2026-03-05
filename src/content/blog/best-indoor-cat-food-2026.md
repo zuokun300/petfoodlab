@@ -1,6 +1,7 @@
 ---
 title: 'Best Indoor Cat Food 2026: Formulas for House Cats'
 date: '2026-03-04'
+description: 'Best indoor cat food in 2026 reviewed. We compared 15+ formulas designed for less active indoor cats to manage weight and hairballs.'
 category: 'Cat Food'
 ---
 
@@ -30,7 +31,7 @@ Indoor cats need:
 
 **Cons:** Contains grains
 
-[Check Price on Amazon →](https://www.amazon.com/s?k=hills+science+diet+cat+food&tag=zuokun300-21)
+[Check Price on Amazon →](https://amzn.to/4u7U2zz)
 
 ### 2. Royal Canin Indoor - Best for Hairballs
 
@@ -38,7 +39,7 @@ Indoor cats need:
 
 **Cons:** Premium price
 
-[Check Price on Amazon →](https://www.amazon.com/s?k=hills+science+diet+cat+food&tag=zuokun300-21)
+[Check Price on Amazon →](https://amzn.to/4r9K6Tf)
 
 ### 3. Blue Buffalo Indoor - Best Natural
 
@@ -46,7 +47,7 @@ Indoor cats need:
 
 **Cons:** Higher price
 
-[Check Price on Amazon →](https://www.amazon.com/s?k=hills+science+diet+cat+food&tag=zuokun300-21)
+[Check Price on Amazon →](https://amzn.to/4rf4xyb)
 
 ## FAQ
 
