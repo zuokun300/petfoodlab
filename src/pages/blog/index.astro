@@ -14,6 +14,12 @@ const categoryImages = {
   'Supplements': '💊',
   'Guide': '📚',
 };
+
+// 统计每个分类的文章数量
+const categoryCounts = categories.reduce((acc, cat) => {
+  acc[cat] = posts.filter(p => p.data.category === cat).length;
+  return acc;
+}, {} as Record<string, number>);
 ---
 
 <BaseLayout title="Pet Food Reviews & Guides - PetFoodLab">
@@ -31,21 +37,29 @@ const categoryImages = {
   <section class="py-16">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <!-- Category Filter -->
-      <div class="flex flex-wrap gap-3 mb-12 justify-center">
-        <span class="btn-primary bg-blue-600 text-white">All ({posts.length})</span>
+      <div class="flex flex-wrap gap-3 mb-12 justify-center" id="categoryFilter">
+        <button 
+          class="btn-primary bg-blue-600 text-white filter-btn active" 
+          data-category="all"
+        >
+          All ({posts.length})
+        </button>
         {categories.map((cat) => (
-          <span class="btn-secondary">
-            {cat}
-          </span>
+          <button 
+            class="btn-secondary filter-btn" 
+            data-category={cat}
+          >
+            {cat} ({categoryCounts[cat]})
+          </button>
         ))}
       </div>
 
       <!-- Articles Grid -->
-      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8" id="articlesGrid">
         {posts.map((post) => {
           const emoji = categoryImages[post.data.category as keyof typeof categoryImages] || '🐾';
           return (
-            <a href={`/blog/${post.id}`} class="group card overflow-hidden">
+            <a href={`/blog/${post.id}`} class="group card overflow-hidden article-card" data-category={post.data.category}>
               <!-- Featured Image -->
               <div class="relative h-48 bg-gradient-to-br from-blue-100 to-blue-50 overflow-hidden">
                 <div class="absolute inset-0 flex items-center justify-center text-8xl group-hover:scale-110 transition-transform duration-500">
@@ -84,14 +98,50 @@ const categoryImages = {
         })}
       </div>
 
-      <!-- Empty State -->
-      {posts.length === 0 && (
-        <div class="text-center py-20">
-          <div class="text-6xl mb-4">📝</div>
-          <h3 class="text-2xl font-bold mb-2">No articles yet</h3>
-          <p class="text-gray-600">Check back soon for new reviews!</p>
-        </div>
-      )}
+      <!-- Empty State (Hidden by default) -->
+      <div id="emptyState" class="hidden text-center py-20">
+        <div class="text-6xl mb-4">🔍</div>
+        <h3 class="text-2xl font-bold mb-2">No articles in this category</h3>
+        <p class="text-gray-600">Try selecting a different category!</p>
+      </div>
     </div>
   </section>
+
+  <!-- Filter Script -->
+  <script>
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const articleCards = document.querySelectorAll('.article-card');
+    const emptyState = document.getElementById('emptyState');
+
+    filterButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        const category = button.getAttribute('data-category');
+
+        // 更新按钮状态
+        filterButtons.forEach(btn => {
+          btn.classList.remove('btn-primary', 'bg-blue-600', 'text-white', 'active');
+          btn.classList.add('btn-secondary');
+        });
+        button.classList.remove('btn-secondary');
+        button.classList.add('btn-primary', 'bg-blue-600', 'text-white', 'active');
+
+        // 筛选文章
+        let visibleCount = 0;
+        articleCards.forEach(card => {
+          const cardCategory = card.getAttribute('data-category');
+          if (category === 'all' || cardCategory === category) {
+            card.style.display = 'block';
+            visibleCount++;
+          } else {
+            card.style.display = 'none';
+          }
+        });
+
+        // 显示/隐藏空状态
+        if (emptyState) {
+          emptyState.classList.toggle('hidden', visibleCount > 0);
+        }
+      });
+    });
+  </script>
 </BaseLayout>
