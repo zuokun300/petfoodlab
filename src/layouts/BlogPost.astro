@@ -11,19 +11,19 @@ export interface Props {
 
 const { title, date, category } = Astro.props;
 
-// 根据分类生成对应的 Unsplash 图片
-const categoryImages = {
-  'Dog Food': 'https://images.unsplash.com/photo-1589924691195-41432c84c161?w=1200&h=600&fit=crop',
-  'Cat Food': 'https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?w=1200&h=600&fit=crop',
-  'Supplements': 'https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=1200&h=600&fit=crop',
-  'Guide': 'https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?w=1200&h=600&fit=crop',
+// 根据分类生成对应的 emoji 和渐变背景
+const categoryStyles = {
+  'Dog Food': { emoji: '🐕', gradient: 'from-blue-500 to-blue-700' },
+  'Cat Food': { emoji: '🐱', gradient: 'from-purple-500 to-purple-700' },
+  'Supplements': { emoji: '💊', gradient: 'from-green-500 to-green-700' },
+  'Guide': { emoji: '📖', gradient: 'from-amber-500 to-amber-700' },
 };
 
-// 默认图片（狗粮）
-const defaultImage = categoryImages['Dog Food'];
+// 默认样式（狗粮）
+const defaultStyle = categoryStyles['Dog Food'];
 
-// 获取当前分类的图片
-const heroImage = categoryImages[category as keyof typeof categoryImages] || defaultImage;
+// 获取当前分类的样式
+const style = categoryStyles[category as keyof typeof categoryStyles] || defaultStyle;
 
 // 获取目录（从 Astro 的 content collections）
 const headings = Astro.props.headings || [];
@@ -32,7 +32,7 @@ const headings = Astro.props.headings || [];
 <BaseLayout 
   title={`${title} | PetFoodLab`}
   description={`Independent review of ${title.toLowerCase()}. We provide honest, science-backed pet food recommendations based on ingredient analysis, customer feedback, and veterinary research.`}
-  image={heroImage}
+  image={`https://petfoodlab.it.com/og-default.png`}
   type="article"
 >
   <div class="relative">
@@ -43,7 +43,7 @@ const headings = Astro.props.headings || [];
         "@type": "Article",
         "headline": title,
         "description": `Independent review of ${title.toLowerCase()}`,
-        "image": heroImage,
+        "image": "https://petfoodlab.it.com/og-default.png",
         "datePublished": date,
         "dateModified": date,
         "author": {
@@ -71,15 +71,12 @@ const headings = Astro.props.headings || [];
     <article class="max-w-4xl mx-auto py-12 px-4 sm:px-6">
       <!-- Article Header with Hero Image -->
       <header class="mb-12">
-        <!-- Hero Image -->
-        <div class="relative mb-8 rounded-2xl overflow-hidden shadow-2xl">
-          <img 
-            src={heroImage} 
-            alt={title}
-            class="w-full h-64 md:h-80 object-cover"
-            loading="lazy"
-          />
-          <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+        <!-- Hero Image (Gradient Background + Emoji) -->
+        <div class={`relative mb-8 rounded-2xl overflow-hidden shadow-2xl bg-gradient-to-br ${style.gradient}`}>
+          <div class="absolute inset-0 flex items-center justify-center">
+            <span class="text-9xl opacity-90">{style.emoji}</span>
+          </div>
+          <div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
           <div class="absolute bottom-6 left-6 text-white">
             <span class="badge bg-white/20 backdrop-blur-sm text-white mb-3 inline-block">
               {category}
