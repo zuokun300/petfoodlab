@@ -25,6 +25,54 @@ const {
 
 const siteName = 'PetFoodLab';
 const twitterHandle = '@petfoodlab';
+
+function getStructuredData() {
+  const baseSchema = {
+    '@context': 'https://schema.org',
+    '@type': type === 'article' ? 'Article' : 'WebSite',
+    'mainEntityOfPage': {
+      '@type': 'WebPage',
+      '@id': url,
+    },
+    'url': url,
+  };
+
+  if (type === 'article') {
+    return {
+      ...baseSchema,
+      'headline': title,
+      'description': description,
+      'image': image.startsWith('http') ? image : `https://petfoodlab.it.com${image}`,
+      'author': {
+        '@type': 'Organization',
+        'name': siteName,
+        'url': 'https://petfoodlab.it.com',
+      },
+      'publisher': {
+        '@type': 'Organization',
+        'name': siteName,
+        'logo': {
+          '@type': 'ImageObject',
+          'url': 'https://petfoodlab.it.com/logo.png',
+        },
+      },
+      'datePublished': publishedTime,
+      'dateModified': modifiedTime,
+    };
+  }
+
+  return {
+    ...baseSchema,
+    'name': siteName,
+    'description': 'Independent pet food reviews and recommendations',
+    'url': 'https://petfoodlab.it.com',
+    'potentialAction': {
+      '@type': 'SearchAction',
+      'target': 'https://petfoodlab.it.com/blog?q={search_term_string}',
+      'query-input': 'required name=search_term_string',
+    },
+  };
+}
 ---
 
 <!-- Primary Meta Tags -->
@@ -69,53 +117,3 @@ const twitterHandle = '@petfoodlab';
 
 <!-- Structured Data -->
 <script type="application/ld+json" set:html={JSON.stringify(getStructuredData())} />
-
-{
-  function getStructuredData() {
-    const baseSchema = {
-      '@context': 'https://schema.org',
-      '@type': type === 'article' ? 'Article' : 'WebSite',
-      'mainEntityOfPage': {
-        '@type': 'WebPage',
-        '@id': url,
-      },
-      'url': url,
-    };
-
-    if (type === 'article') {
-      return {
-        ...baseSchema,
-        'headline': title,
-        'description': description,
-        'image': image.startsWith('http') ? image : `https://petfoodlab.it.com${image}`,
-        'author': {
-          '@type': 'Organization',
-          'name': siteName,
-          'url': 'https://petfoodlab.it.com',
-        },
-        'publisher': {
-          '@type': 'Organization',
-          'name': siteName,
-          'logo': {
-            '@type': 'ImageObject',
-            'url': 'https://petfoodlab.it.com/logo.png',
-          },
-        },
-        'datePublished': publishedTime,
-        'dateModified': modifiedTime,
-      };
-    }
-
-    return {
-      ...baseSchema,
-      'name': siteName,
-      'description': 'Independent pet food reviews and recommendations',
-      'url': 'https://petfoodlab.it.com',
-      'potentialAction': {
-        '@type': 'SearchAction',
-        'target': 'https://petfoodlab.it.com/blog?q={search_term_string}',
-        'query-input': 'required name=search_term_string',
-      },
-    };
-  }
-}
