@@ -1,43 +1,127 @@
 ---
 import '../styles/global.css';
+import MobileNav from '../components/MobileNav.astro';
+import SEO from '../components/SEO.astro';
 
 export interface Props {
   title: string;
+  description?: string;
+  image?: string;
+  type?: 'website' | 'article';
 }
 
-const { title } = Astro.props;
+const { 
+  title, 
+  description = 'Independent pet food reviews and recommendations. We test and review pet food so you don\'t have to. Honest reviews, science-backed recommendations.',
+  image,
+  type = 'website'
+} = Astro.props;
 ---
 
 <!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <title>{title}</title>
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    
+    <!-- SEO Component -->
+    <SEO 
+      title={title}
+      description={description}
+      image={image}
+      type={type}
+    />
   </head>
-  <body class="bg-gray-50 text-gray-900">
-    <header class="bg-white shadow-sm">
-      <nav class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
-        <a href="/" class="text-2xl font-bold text-blue-600">🐾 PetFoodLab</a>
-        <div class="space-x-6">
-          <a href="/blog" class="hover:text-blue-600">Reviews</a>
-          <a href="/about" class="hover:text-blue-600">About</a>
-          <a href="/contact" class="hover:text-blue-600">Contact</a>
+  <body class="bg-gray-50 text-gray-900 min-h-screen flex flex-col">
+    <!-- Mobile Navigation Component -->
+    <MobileNav isOpen={false} />
+
+    <!-- Header -->
+    <header class="sticky top-0 z-40 bg-white/80 backdrop-blur-md border-b border-gray-200">
+      <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-16">
+          <!-- Logo -->
+          <a href="/" class="flex items-center gap-2 group">
+            <span class="text-3xl group-hover:scale-110 transition-transform duration-200">🐾</span>
+            <span class="text-xl font-bold font-outfit text-gray-900 group-hover:text-blue-600 transition-colors">
+              PetFoodLab
+            </span>
+          </a>
+
+          <!-- Desktop Navigation -->
+          <div class="hidden md:flex items-center gap-8">
+            <a href="/blog" class="text-gray-600 hover:text-blue-600 font-medium transition-colors">Reviews</a>
+            <a href="/about" class="text-gray-600 hover:text-blue-600 font-medium transition-colors">About</a>
+            <a href="/contact" class="text-gray-600 hover:text-blue-600 font-medium transition-colors">Contact</a>
+            <a href="/blog" class="btn-primary text-sm">Browse Reviews</a>
+          </div>
+
+          <!-- Mobile Menu Button -->
+          <button 
+            data-open-mobile-nav
+            class="md:hidden p-2 text-gray-600 hover:text-blue-600 hover:bg-gray-100 rounded-lg transition-colors touch-manipulation"
+            aria-label="Open menu"
+          >
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+            </svg>
+          </button>
         </div>
       </nav>
     </header>
-    
-    <main class="max-w-6xl mx-auto px-4 py-8">
+
+    <!-- Main Content -->
+    <main class="flex-grow">
       <slot />
     </main>
-    
-    <footer class="bg-gray-800 text-white mt-16 py-8">
-      <div class="max-w-6xl mx-auto px-4 text-center">
-        <p>&copy; 2026 PetFoodLab. All rights reserved.</p>
-        <p class="text-gray-400 text-sm mt-2">
-          We independently review pet food products. When you buy through our links, we may earn a commission.
-        </p>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white mt-20">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div class="grid md:grid-cols-4 gap-8">
+          <!-- Brand -->
+          <div class="md:col-span-2">
+            <div class="flex items-center gap-2 mb-4">
+              <span class="text-3xl">🐾</span>
+              <span class="text-xl font-bold font-outfit">PetFoodLab</span>
+            </div>
+            <p class="text-gray-400 text-sm leading-relaxed">
+              Independent pet food reviews and recommendations. We test and review pet food so you don't have to.
+            </p>
+          </div>
+
+          <!-- Quick Links -->
+          <div>
+            <h4 class="font-semibold mb-4">Quick Links</h4>
+            <ul class="space-y-2 text-sm">
+              <li><a href="/blog" class="text-gray-400 hover:text-white transition-colors">All Reviews</a></li>
+              <li><a href="/about" class="text-gray-400 hover:text-white transition-colors">About Us</a></li>
+              <li><a href="/contact" class="text-gray-400 hover:text-white transition-colors">Contact</a></li>
+              <li><a href="/privacy" class="text-gray-400 hover:text-white transition-colors">Privacy Policy</a></li>
+            </ul>
+          </div>
+
+          <!-- Categories -->
+          <div>
+            <h4 class="font-semibold mb-4">Categories</h4>
+            <ul class="space-y-2 text-sm">
+              <li><a href="/blog" class="text-gray-400 hover:text-white transition-colors">Dog Food</a></li>
+              <li><a href="/blog" class="text-gray-400 hover:text-white transition-colors">Cat Food</a></li>
+              <li><a href="/blog" class="text-gray-400 hover:text-white transition-colors">Supplements</a></li>
+              <li><a href="/blog" class="text-gray-400 hover:text-white transition-colors">Treats</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Bottom Bar -->
+        <div class="border-t border-gray-800 mt-8 pt-8 text-center text-sm text-gray-400">
+          <p>&copy; {new Date().getFullYear()} PetFoodLab. All rights reserved.</p>
+          <p class="mt-2 text-xs">
+            We independently review pet food products. When you buy through our links, we may earn a commission.
+          </p>
+        </div>
       </div>
     </footer>
   </body>

@@ -1,68 +1,203 @@
 ---
+import { getCollection } from 'astro:content';
 import BaseLayout from '../layouts/BaseLayout.astro';
 
-const topReviews = [
-  { title: 'Best Dog Food 2026', slug: 'best-dog-food-2026', rating: 4.9 },
-  { title: 'Best Cat Food 2026', slug: 'best-cat-food-2026', rating: 4.8 },
-  { title: 'Best Probiotics for Dogs', slug: 'best-probiotics-dogs', rating: 4.7 },
+const posts = await getCollection('blog');
+posts.sort((a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime());
+
+const topReviews = posts.slice(0, 3);
+const categories = [
+  { name: 'Dog Food', icon: '🐕', count: posts.filter(p => p.data.category.includes('Dog')).length },
+  { name: 'Cat Food', icon: '🐱', count: posts.filter(p => p.data.category.includes('Cat')).length },
+  { name: 'Supplements', icon: '💊', count: posts.filter(p => p.data.category.includes('Supplements')).length },
+  { name: 'Guides', icon: '📚', count: posts.filter(p => p.data.category.includes('Guide')).length },
 ];
 ---
 
-<BaseLayout title="PetFoodLab - Independent Pet Food Reviews">
+<BaseLayout 
+  title="PetFoodLab - Independent Pet Food Reviews | Dog & Cat Food Guides 2026"
+  description="Independent pet food reviews and recommendations. We test and review dog food, cat food, and supplements. Honest reviews, science-backed recommendations for 2026."
+  type="website"
+>
   <!-- Hero Section -->
-  <section class="text-center py-16">
-    <h1 class="text-5xl font-bold mb-4">
-      🐾 Independent Pet Food Reviews
-    </h1>
-    <p class="text-xl text-gray-600 mb-8">
-      We test and review pet food so you don't have to. Honest reviews, science-backed recommendations.
-    </p>
-    <a href="/blog" class="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700">
-      Browse Reviews
-    </a>
+  <section class="relative bg-gradient-to-br from-blue-600 via-blue-700 to-blue-900 text-white py-16 sm:py-24 overflow-hidden">
+    <!-- Background Pattern -->
+    <div class="absolute inset-0 opacity-10">
+      <div class="absolute top-20 left-10 text-9xl">🐾</div>
+      <div class="absolute bottom-20 right-10 text-9xl">🦴</div>
+      <div class="absolute top-1/2 left-1/2 text-9xl -translate-x-1/2 -translate-y-1/2">🐕</div>
+    </div>
+
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h1 class="text-3xl sm:text-5xl md:text-7xl font-bold mb-4 sm:mb-6 animate-fade-in leading-tight">
+        Independent Pet Food Reviews
+      </h1>
+      <p class="text-lg sm:text-xl md:text-2xl text-blue-100 mb-6 sm:mb-10 max-w-3xl mx-auto animate-slide-up">
+        We test and review pet food so you don't have to. 
+        <br class="hidden md:block" />
+        Honest reviews, science-backed recommendations.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center animate-slide-up">
+        <a href="/blog" class="btn-primary bg-white text-blue-600 hover:bg-blue-50 inline-flex items-center justify-center gap-2">
+          Browse All Reviews
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
+          </svg>
+        </a>
+        <a href="/about" class="btn-secondary border-white text-white hover:bg-white/10 hover:border-white inline-flex items-center justify-center">
+          Learn More
+        </a>
+      </div>
+
+      <!-- Stats -->
+      <div class="mt-16 grid grid-cols-3 gap-8 max-w-2xl mx-auto">
+        <div class="text-center">
+          <div class="text-4xl font-bold mb-1">{posts.length}+</div>
+          <div class="text-blue-200 text-sm">Reviews</div>
+        </div>
+        <div class="text-center">
+          <div class="text-4xl font-bold mb-1">100%</div>
+          <div class="text-blue-200 text-sm">Independent</div>
+        </div>
+        <div class="text-center">
+          <div class="text-4xl font-bold mb-1">24/7</div>
+          <div class="text-blue-200 text-sm">Updated</div>
+        </div>
+      </div>
+    </div>
   </section>
 
-  <!-- Top Reviews -->
-  <section class="py-12">
-    <h2 class="text-3xl font-bold mb-8 text-center">Top Reviews</h2>
-    <div class="grid md:grid-cols-3 gap-6">
-      {topReviews.map((review) => (
-        <a href={`/blog/${review.slug}`} class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition">
-          <div class="flex items-center mb-2">
-            <span class="text-yellow-500">⭐</span>
-            <span class="ml-2 font-semibold">{review.rating}</span>
-          </div>
-          <h3 class="text-xl font-semibold">{review.title}</h3>
+  <!-- Latest Reviews -->
+  <section class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <h2 class="text-4xl font-bold mb-4">Latest Reviews</h2>
+        <p class="text-gray-600 text-lg max-w-2xl mx-auto">
+          Our most recent pet food reviews and buying guides
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-8">
+        {topReviews.map((post) => {
+          const emoji = post.data.category.includes('Dog') ? '🐕' : post.data.category.includes('Cat') ? '🐱' : '💊';
+          return (
+            <a href={`/blog/${post.id}`} class="group card overflow-hidden">
+              <!-- Featured Image -->
+              <div class="relative h-48 bg-gradient-to-br from-blue-100 to-blue-50 overflow-hidden">
+                <div class="absolute inset-0 flex items-center justify-center text-8xl group-hover:scale-110 transition-transform duration-500">
+                  {emoji}
+                </div>
+                <div class="absolute top-4 left-4">
+                  <span class="badge badge-blue text-xs">{post.data.category}</span>
+                </div>
+              </div>
+              
+              <!-- Content -->
+              <div class="p-6">
+                <h3 class="text-xl font-bold group-hover:text-blue-600 transition-colors mb-3 line-clamp-2">
+                  {post.data.title}
+                </h3>
+                <div class="flex items-center justify-between">
+                  <span class="text-gray-400 text-sm">{post.data.date}</span>
+                  <div class="flex items-center gap-2 text-blue-600 font-semibold group-hover:gap-3 transition-all">
+                    Read Review
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </a>
+          );
+        })}
+      </div>
+
+      <div class="text-center mt-12">
+        <a href="/blog" class="btn-primary inline-flex items-center gap-2">
+          View All Reviews
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
+          </svg>
         </a>
-      ))}
+      </div>
     </div>
   </section>
 
   <!-- Categories -->
-  <section class="py-12">
-    <h2 class="text-3xl font-bold mb-8 text-center">Browse by Category</h2>
-    <div class="grid md:grid-cols-4 gap-4">
-      <a href="/blog" class="bg-blue-50 p-6 rounded-lg text-center hover:bg-blue-100">
-        🐕 Dog Food
-      </a>
-      <a href="/blog" class="bg-blue-50 p-6 rounded-lg text-center hover:bg-blue-100">
-        🐱 Cat Food
-      </a>
-      <a href="/blog" class="bg-blue-50 p-6 rounded-lg text-center hover:bg-blue-100">
-        💊 Supplements
-      </a>
-      <a href="/blog" class="bg-blue-50 p-6 rounded-lg text-center hover:bg-blue-100">
-        🦴 Treats
-      </a>
+  <section class="py-20 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <h2 class="text-4xl font-bold mb-4">Browse by Category</h2>
+        <p class="text-gray-600 text-lg max-w-2xl mx-auto">
+          Find the perfect food and supplements for your pet
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-4 gap-6">
+        {categories.map((cat) => (
+          <a href="/blog" class="group card p-8 text-center hover:-translate-y-1">
+            <div class="text-5xl mb-4 group-hover:scale-110 transition-transform duration-300">{cat.icon}</div>
+            <h3 class="text-xl font-bold mb-2">{cat.name}</h3>
+            <p class="text-gray-500 text-sm">{cat.count} reviews</p>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Trust Us -->
+  <section class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <h2 class="text-4xl font-bold mb-4">Why Trust PetFoodLab?</h2>
+        <p class="text-gray-600 text-lg max-w-2xl mx-auto">
+          We're dedicated to helping pet owners make informed decisions
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="card p-8 text-center">
+          <div class="text-5xl mb-4">🔬</div>
+          <h3 class="text-xl font-bold mb-3">Science-Backed</h3>
+          <p class="text-gray-600">
+            Our reviews are based on ingredient analysis, nutritional science, and veterinary research.
+          </p>
+        </div>
+
+        <div class="card p-8 text-center">
+          <div class="text-5xl mb-4">✅</div>
+          <h3 class="text-xl font-bold mb-3">Independent</h3>
+          <p class="text-gray-600">
+            We buy all products ourselves. No manufacturer influence on our reviews.
+          </p>
+        </div>
+
+        <div class="card p-8 text-center">
+          <div class="text-5xl mb-4">💬</div>
+          <h3 class="text-xl font-bold mb-3">Community-Driven</h3>
+          <p class="text-gray-600">
+            We analyze thousands of verified customer reviews to understand real-world performance.
+          </p>
+        </div>
+      </div>
     </div>
   </section>
 
   <!-- Affiliate Disclosure -->
-  <section class="bg-yellow-50 border border-yellow-200 rounded-lg p-6 mt-12">
-    <h3 class="font-semibold mb-2">📋 Affiliate Disclosure</h3>
-    <p class="text-gray-600 text-sm">
-      PetFoodLab is reader-supported. When you buy through links on our site, we may earn an affiliate commission at no extra cost to you. 
-      This helps us continue providing independent reviews.
-    </p>
+  <section class="py-12 bg-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="alert">
+        <h3 class="font-semibold mb-2 text-amber-800 flex items-center gap-2">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+          </svg>
+          Affiliate Disclosure
+        </h3>
+        <p class="text-amber-700 text-sm leading-relaxed">
+          PetFoodLab is reader-supported. When you buy through links on our site, we may earn an affiliate commission at no extra cost to you. 
+          This helps us continue providing independent reviews. We only recommend products we genuinely believe in.
+        </p>
+      </div>
+    </div>
   </section>
 </BaseLayout>

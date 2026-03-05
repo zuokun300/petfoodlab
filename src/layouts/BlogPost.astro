@@ -1,5 +1,7 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro';
+import BaseLayout from './BaseLayout.astro';
+import TableOfContents from '../components/TableOfContents.astro';
+import ShareButtons from '../components/ShareButtons.astro';
 
 export interface Props {
   title: string;
@@ -8,33 +10,149 @@ export interface Props {
 }
 
 const { title, date, category } = Astro.props;
+
+// 根据分类生成对应的 Unsplash 图片
+const categoryImages = {
+  'Dog Food': 'https://images.unsplash.com/photo-1589924691195-41432c84c161?w=1200&h=600&fit=crop',
+  'Cat Food': 'https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?w=1200&h=600&fit=crop',
+  'Supplements': 'https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=1200&h=600&fit=crop',
+  'Guide': 'https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?w=1200&h=600&fit=crop',
+};
+
+// 默认图片（狗粮）
+const defaultImage = categoryImages['Dog Food'];
+
+// 获取当前分类的图片
+const heroImage = categoryImages[category as keyof typeof categoryImages] || defaultImage;
+
+// 获取目录（从 Astro 的 content collections）
+const headings = Astro.props.headings || [];
 ---
 
-<BaseLayout title={title}>
-  <article class="max-w-4xl mx-auto">
-    <header class="mb-8">
-      <span class="text-blue-600 text-sm font-semibold">{category}</span>
-      <h1 class="text-4xl font-bold mt-2 mb-4">{title}</h1>
-      <p class="text-gray-500">Published on {new Date(date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}</p>
+<BaseLayout 
+  title={`${title} | PetFoodLab`}
+  description={`Independent review of ${title.toLowerCase()}. We provide honest, science-backed pet food recommendations based on ingredient analysis, customer feedback, and veterinary research.`}
+  image={heroImage}
+  type="article"
+>
+  <div class="relative">
+    <!-- Review Schema -->
+    <script type="application/ld+json">
+      {JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": title,
+        "description": `Independent review of ${title.toLowerCase()}`,
+        "image": heroImage,
+        "datePublished": date,
+        "dateModified": date,
+        "author": {
+          "@type": "Organization",
+          "name": "PetFoodLab Team",
+          "url": "https://petfoodlab.it.com"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "PetFoodLab",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://petfoodlab.it.com/logo.png"
+          }
+        },
+        "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": Astro.url?.href
+        },
+        "articleSection": category
+      })}
+    </script>
+
+    <!-- Main Content -->
+    <article class="max-w-4xl mx-auto py-12 px-4 sm:px-6">
+      <!-- Article Header with Hero Image -->
+      <header class="mb-12">
+        <!-- Hero Image -->
+        <div class="relative mb-8 rounded-2xl overflow-hidden shadow-2xl">
+          <img 
+            src={heroImage} 
+            alt={title}
+            class="w-full h-64 md:h-80 object-cover"
+            loading="lazy"
+          />
+          <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+          <div class="absolute bottom-6 left-6 text-white">
+            <span class="badge bg-white/20 backdrop-blur-sm text-white mb-3 inline-block">
+              {category}
+            </span>
+            <p class="text-white/80 text-sm flex items-center gap-2">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+              </svg>
+              Updated {new Date(date).toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' })}
+            </p>
+          </div>
+        </div>
+
+        <!-- Title -->
+        <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6 leading-tight">
+          {title}
+        </h1>
+
+      <!-- Share -->
+      <ShareButtons title={title} url={Astro.url.href} />
     </header>
-    
-    <div class="bg-yellow-50 border-l-4 border-yellow-400 p-4 mb-8">
-      <p class="text-sm text-gray-700">
-        <strong>⚠️ Affiliate Disclosure:</strong> This post may contain affiliate links. 
-        We earn a commission if you make a purchase, at no extra cost to you.
+
+    <!-- Affiliate Disclosure -->
+    <div class="alert mb-10">
+      <p class="text-sm text-amber-800 leading-relaxed">
+        <strong>⚠️ Affiliate Disclosure:</strong> This post may contain affiliate links. We earn a commission if you make a purchase, at no extra cost to you. This supports our independent testing and allows us to continue providing honest reviews.
       </p>
     </div>
-    
-    <div class="prose lg:prose-xl max-w-none">
+
+    <!-- Table of Contents (Mobile) -->
+    <TableOfContents headings={headings} />
+
+    <!-- Article Content -->
+    <div class="prose prose-base sm:prose-lg max-w-none prose-headings:font-bold prose-headings:text-gray-900 prose-a:text-blue-600 prose-a:no-underline hover:prose-a:underline prose-img:rounded-xl prose-img:shadow-lg prose-blockquote:border-blue-600 prose-blockquote:bg-blue-50 prose-blockquote:p-4 prose-blockquote:rounded-r-xl
+      prose-h2:text-2xl prose-h2:mt-8 prose-h2:mb-4
+      prose-h3:text-xl prose-h3:mt-6 prose-h3:mb-3
+      prose-p:text-gray-700 prose-p:leading-relaxed
+      prose-ul:my-4 prose-li:text-gray-700
+      prose-strong:text-gray-900">
       <slot />
     </div>
-    
-    <footer class="mt-12 pt-8 border-t">
-      <h3 class="text-xl font-bold mb-2">About PetFoodLab</h3>
-      <p class="text-gray-600">
-        We independently review pet food and supplements. Our reviews are based on 
-        ingredient analysis, customer feedback, and veterinary research.
-      </p>
+
+    <!-- Footer -->
+    <footer class="mt-16 pt-8 border-t border-gray-200">
+      <div class="bg-gradient-to-br from-gray-50 to-blue-50 rounded-2xl p-8">
+        <div class="flex items-start gap-4 mb-4">
+          <span class="text-4xl">🐾</span>
+          <div>
+            <h3 class="text-xl font-bold mb-2">About PetFoodLab</h3>
+            <p class="text-gray-600 mb-4">
+              We independently review pet food and supplements. Our reviews are based on ingredient analysis, customer feedback, and veterinary research.
+            </p>
+            <div class="flex flex-wrap gap-4">
+              <a href="/about" class="text-blue-600 font-semibold hover:underline flex items-center gap-1">
+                Learn more about us
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
+                </svg>
+              </a>
+              <a href="/contact" class="text-blue-600 font-semibold hover:underline flex items-center gap-1">
+                Contact us
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
     </footer>
   </article>
+
+  <!-- Table of Contents (Desktop Sidebar) -->
+  <TableOfContents headings={headings} />
+</div>
 </BaseLayout>

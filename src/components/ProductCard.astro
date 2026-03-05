@@ -1,0 +1,109 @@
+---
+export interface Props {
+  rank: number;
+  name: string;
+  rating: number;
+  bestFor: string;
+  price: string;
+  pros: string[];
+  cons: string[];
+  affiliateLink?: string;
+  isTopPick?: boolean;
+}
+
+const { rank, name, rating, bestFor, price, pros, cons, affiliateLink = '#', isTopPick = false } = Astro.props;
+
+// 生成星级显示
+const stars = '⭐'.repeat(Math.floor(rating)) + (rating % 1 >= 0.5 ? '½' : '');
+---
+
+<div class="product-card relative {isTopPick ? 'border-2 border-green-400 bg-gradient-to-br from-green-50 to-white' : ''}">
+  <!-- Top Pick Badge -->
+  {isTopPick && (
+    <div class="absolute -top-3 left-1/2 -translate-x-1/2 bg-gradient-to-r from-green-500 to-emerald-500 text-white px-6 py-2 rounded-full font-bold text-sm shadow-lg flex items-center gap-2">
+      <span>🏆</span>
+      Top Pick
+    </div>
+  )}
+
+  <!-- Header -->
+  <div class="mb-6">
+    <div class="flex items-center gap-3 mb-3">
+      <span class="w-10 h-10 rounded-full bg-blue-600 text-white flex items-center justify-center font-bold text-lg">
+        #{rank}
+      </span>
+      <div>
+        <h3 class="text-xl font-bold text-gray-900">{name}</h3>
+        <div class="flex items-center gap-2 mt-1">
+          <span class="text-amber-400 text-lg">{stars}</span>
+          <span class="text-gray-600 font-semibold">{rating}/5</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Key Info Grid -->
+  <div class="grid grid-cols-2 gap-4 mb-6">
+    <div class="bg-blue-50 rounded-xl p-4">
+      <div class="text-sm text-blue-600 font-medium mb-1">Best For</div>
+      <div class="text-gray-900 font-semibold text-sm">{bestFor}</div>
+    </div>
+    <div class="bg-purple-50 rounded-xl p-4">
+      <div class="text-sm text-purple-600 font-medium mb-1">Price</div>
+      <div class="text-gray-900 font-semibold text-sm">{price}</div>
+    </div>
+  </div>
+
+  <!-- Pros & Cons -->
+  <div class="grid md:grid-cols-2 gap-4 mb-6">
+    <!-- Pros -->
+    <div class="bg-green-50 rounded-xl p-4 border border-green-200">
+      <h4 class="font-bold text-green-800 mb-3 flex items-center gap-2">
+        <span class="text-xl">✅</span>
+        Pros
+      </h4>
+      <ul class="space-y-2">
+        {pros.map((pro) => (
+          <li class="flex items-start gap-2 text-sm text-green-700">
+            <span class="text-green-600 mt-0.5">•</span>
+            <span>{pro}</span>
+          </li>
+        ))}
+      </ul>
+    </div>
+
+    <!-- Cons -->
+    <div class="bg-red-50 rounded-xl p-4 border border-red-200">
+      <h4 class="font-bold text-red-800 mb-3 flex items-center gap-2">
+        <span class="text-xl">⚠️</span>
+        Cons
+      </h4>
+      <ul class="space-y-2">
+        {cons.map((con) => (
+          <li class="flex items-start gap-2 text-sm text-red-700">
+            <span class="text-red-600 mt-0.5">•</span>
+            <span>{con}</span>
+          </li>
+        ))}
+      </ul>
+    </div>
+  </div>
+
+  <!-- CTA Button -->
+  <a 
+    href={affiliateLink} 
+    class="btn-primary w-full flex items-center justify-center gap-2 group"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    Check Price on Amazon
+    <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
+    </svg>
+  </a>
+
+  <!-- Affiliate Note -->
+  <p class="text-center text-gray-400 text-xs mt-3">
+    We may earn a commission at no extra cost to you
+  </p>
+</div>

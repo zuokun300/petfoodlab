@@ -2,37 +2,146 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 
-<BaseLayout title="Contact PetFoodLab">
-  <h1 class="text-4xl font-bold mb-8">Contact Us</h1>
-  
-  <div class="prose lg:prose-xl">
-    <p class="text-xl text-gray-600 mb-8">
-      Have questions, suggestions, or product review requests? We'd love to hear from you!
-    </p>
+<BaseLayout title="Contact PetFoodLab - Get in Touch">
+  <!-- Header -->
+  <section class="bg-gradient-to-r from-blue-600 to-blue-800 text-white py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h1 class="text-4xl md:text-5xl font-bold mb-4">Contact Us</h1>
+      <p class="text-xl text-blue-100 max-w-2xl mx-auto">
+        Have questions, suggestions, or product review requests? We'd love to hear from you!
+      </p>
+    </div>
+  </section>
 
-    <h2>Get in Touch</h2>
-    <ul>
-      <li><strong>Email:</strong> <a href="mailto:hello@petfoodlab.it.com" class="text-blue-600">hello@petfoodlab.it.com</a></li>
-      <li><strong>Response Time:</strong> 24-48 hours</li>
-    </ul>
+  <!-- Content -->
+  <section class="py-16">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <!-- Contact Methods -->
+      <div class="grid md:grid-cols-3 gap-6 mb-16">
+        <div class="card p-6 text-center">
+          <div class="text-4xl mb-4">📧</div>
+          <h3 class="font-bold mb-2">Email</h3>
+          <a href="mailto:hello@petfoodlab.it.com" class="text-blue-600 hover:underline">
+            hello@petfoodlab.it.com
+          </a>
+          <p class="text-gray-500 text-sm mt-2">Response time: 24-48 hours</p>
+        </div>
 
-    <h2>Product Review Requests</h2>
-    <p>
-      Want us to review a specific product? Send us:
-    </p>
-    <ul>
-      <li>Product name and brand</li>
-      <li>Where to buy it</li>
-      <li>Why you think it's worth reviewing</li>
-    </ul>
+        <div class="card p-6 text-center">
+          <div class="text-4xl mb-4">💬</div>
+          <h3 class="font-bold mb-2">Social Media</h3>
+          <div class="space-y-1 text-sm">
+            <a href="#" class="text-blue-600 hover:underline block">Twitter</a>
+            <a href="#" class="text-blue-600 hover:underline block">Facebook</a>
+            <a href="#" class="text-blue-600 hover:underline block">Instagram</a>
+          </div>
+        </div>
 
-    <h2>Advertising & Partnerships</h2>
-    <p>
-      For advertising inquiries, contact 
-      <a href="mailto:ads@petfoodlab.it.com" class="text-blue-600">ads@petfoodlab.it.com</a>
-    </p>
-    <p class="text-sm text-gray-500">
-      Note: We maintain editorial independence. Advertising does not influence our reviews.
-    </p>
-  </div>
+        <div class="card p-6 text-center">
+          <div class="text-4xl mb-4">📋</div>
+          <h3 class="font-bold mb-2">Press</h3>
+          <a href="mailto:press@petfoodlab.it.com" class="text-blue-600 hover:underline">
+            press@petfoodlab.it.com
+          </a>
+          <p class="text-gray-500 text-sm mt-2">For media inquiries</p>
+        </div>
+      </div>
+
+      <!-- What We Can Help With -->
+      <div class="mb-16">
+        <h2 class="text-3xl font-bold mb-6">What We Can Help With</h2>
+        
+        <div class="grid md:grid-cols-2 gap-6">
+          <div class="card p-6">
+            <div class="flex items-start gap-4">
+              <span class="text-3xl">📝</span>
+              <div>
+                <h3 class="font-bold mb-2">Product Review Requests</h3>
+                <p class="text-gray-600 text-sm">
+                  Want us to review a specific product? Send us the product name, where to buy it, 
+                  and why you think it's worth reviewing.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="card p-6">
+            <div class="flex items-start gap-4">
+              <span class="text-3xl">❓</span>
+              <div>
+                <h3 class="font-bold mb-2">General Questions</h3>
+                <p class="text-gray-600 text-sm">
+                  Questions about our reviews, methodology, or recommendations? We're here to help!
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="card p-6">
+            <div class="flex items-start gap-4">
+              <span class="text-3xl">🤝</span>
+              <div>
+                <h3 class="font-bold mb-2">Advertising & Partnerships</h3>
+                <p class="text-gray-600 text-sm">
+                  For advertising inquiries, contact ads@petfoodlab.it.com. Note: Advertising does not influence our reviews.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="card p-6">
+            <div class="flex items-start gap-4">
+              <span class="text-3xl">🔧</span>
+              <div>
+                <h3 class="font-bold mb-2">Technical Issues</h3>
+                <p class="text-gray-600 text-sm">
+                  Found a bug on our site? Having trouble with affiliate links? Let us know!
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- FAQ -->
+      <div class="bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl p-8">
+        <h2 class="text-3xl font-bold mb-6">Frequently Asked Questions</h2>
+        
+        <div class="space-y-6">
+          <div>
+            <h3 class="font-bold mb-2 flex items-center gap-2">
+              <span class="text-blue-600">Q:</span>
+              How do you fund your reviews?
+            </h3>
+            <p class="text-gray-600 ml-6">
+              We're reader-supported. When you buy through our affiliate links, we earn a small commission 
+              at no extra cost to you. This allows us to remain independent and continue providing honest reviews.
+            </p>
+          </div>
+
+          <div>
+            <h3 class="font-bold mb-2 flex items-center gap-2">
+              <span class="text-blue-600">Q:</span>
+              Do you accept free products from manufacturers?
+            </h3>
+            <p class="text-gray-600 ml-6">
+              No. We purchase all products ourselves to maintain complete independence and avoid any bias 
+              in our reviews.
+            </p>
+          </div>
+
+          <div>
+            <h3 class="font-bold mb-2 flex items-center gap-2">
+              <span class="text-blue-600">Q:</span>
+              How often do you update reviews?
+            </h3>
+            <p class="text-gray-600 ml-6">
+              We regularly update our reviews based on new product releases, formulation changes, and 
+              customer feedback. Check the "Updated" date on each review.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 </BaseLayout>

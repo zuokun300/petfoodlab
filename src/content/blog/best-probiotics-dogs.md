@@ -31,7 +31,7 @@ After testing 20+ dog probiotic supplements, here are our top picks:
 
 **Cons:** Higher price point
 
-[Check Price on Amazon →](#)
+[Check Price on Amazon →](https://amzn.to/3PgVQWF)
 
 ### 3. Zesty Paws Probiotic Bites - Best Tasty
 

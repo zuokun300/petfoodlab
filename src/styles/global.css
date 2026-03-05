@@ -1,3 +1,181 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@600;700;800&display=swap');
+
+@layer base {
+  html {
+    font-family: 'Inter', system-ui, sans-serif;
+    scroll-behavior: smooth;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Outfit', sans-serif;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+  }
+}
+
+@layer components {
+  /* 专业按钮 */
+  .btn-primary {
+    @apply bg-blue-600 text-white px-6 py-3 rounded-xl font-semibold 
+           hover:bg-blue-700 transition-all duration-200 
+           shadow-md hover:shadow-lg hover:-translate-y-0.5;
+  }
+
+  .btn-secondary {
+    @apply bg-white text-gray-700 px-6 py-3 rounded-xl font-semibold 
+           border-2 border-gray-200 hover:border-blue-600 hover:text-blue-600 
+           transition-all duration-200;
+  }
+
+  /* 专业卡片 */
+  .card {
+    @apply bg-white rounded-2xl shadow-sm border border-gray-100 
+           hover:shadow-xl hover:border-blue-200 transition-all duration-300;
+  }
+
+  /* 评测盒子 */
+  .review-box {
+    @apply bg-gradient-to-br from-green-50 to-emerald-50 
+           border-2 border-green-200 rounded-2xl p-6 
+           hover:border-green-300 transition-all duration-300;
+  }
+
+  /* 产品卡片 */
+  .product-card {
+    @apply bg-white rounded-2xl shadow-md border border-gray-100 p-6 
+           hover:shadow-xl hover:-translate-y-1 transition-all duration-300;
+  }
+
+  /* 分类标签 */
+  .badge {
+    @apply inline-block px-4 py-1.5 rounded-full text-sm font-semibold;
+  }
+
+  .badge-blue {
+    @apply bg-blue-100 text-blue-700;
+  }
+
+  .badge-green {
+    @apply bg-green-100 text-green-700;
+  }
+
+  .badge-amber {
+    @apply bg-amber-100 text-amber-700;
+  }
+
+  /* 链接样式 */
+  .link-amazon {
+    @apply inline-flex items-center gap-2 text-blue-600 font-semibold 
+           hover:text-blue-800 transition-colors duration-200 
+           group;
+  }
+
+  .link-amazon:hover::after {
+    content: '→';
+    @apply inline-block transition-transform duration-200;
+    transform: translateX(4px);
+  }
+
+  /* 警告框 */
+  .alert {
+    @apply bg-amber-50 border-l-4 border-amber-400 p-5 rounded-r-xl;
+  }
+
+  /* 评分 */
+  .rating {
+    @apply flex items-center gap-1;
+  }
+
+  .rating-star {
+    @apply text-amber-400 text-lg;
+  }
+
+  /* 产品图片容器 */
+  .product-image-placeholder {
+    @apply bg-gradient-to-br from-gray-100 to-gray-200 rounded-xl flex items-center justify-center text-6xl aspect-video;
+  }
+
+  /* 移动端优化 */
+  @media (max-width: 640px) {
+    /* 卡片间距缩小 */
+    .card {
+      @apply p-4;
+    }
+
+    /* 按钮全宽 */
+    .btn-primary,
+    .btn-secondary {
+      @apply w-full justify-center;
+    }
+
+    /* 网格单列 */
+    .grid {
+      @apply grid-cols-1 gap-4;
+    }
+  }
+
+  /* 分享按钮动画 */
+  .share-btn {
+    @apply transform hover:scale-110 active:scale-95;
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    @apply bg-gradient-to-r from-blue-600 to-blue-800 bg-clip-text text-transparent;
+  }
+
+  .animate-fade-in {
+    animation: fadeIn 0.6s ease-out;
+  }
+
+  .animate-slide-up {
+    animation: slideUp 0.5s ease-out;
+  }
+
+  /* 触摸优化 */
+  .touch-manipulation {
+    touch-action: manipulation;
+  }
+
+  .touch-none {
+    touch-action: none;
+  }
+
+  /* 防止移动端双击缩放 */
+  * {
+    touch-action: manipulation;
+  }
+
+  /* 移动端按钮最小尺寸 */
+  .btn-touch {
+    @apply min-h-[44px] min-w-[44px] px-4 py-3;
+  }
+
+  /* 移动端优化间距 */
+  @media (max-width: 640px) {
+    .container-mobile {
+      @apply px-4;
+    }
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { 
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to { 
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

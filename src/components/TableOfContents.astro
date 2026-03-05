@@ -1,0 +1,150 @@
+---
+export interface Props {
+  headings: Array<{
+    depth: number;
+    text: string;
+    slug: string;
+  }>;
+}
+
+const { headings } = Astro.props;
+
+// 只获取 H2 和 H3 标题
+const tocHeadings = headings.filter(h => h.depth === 2 || h.depth === 3);
+---
+
+{tocHeadings.length > 0 && (
+  <nav class="toc fixed top-24 right-8 w-64 max-h-[calc(100vh-8rem)] overflow-y-auto bg-white/80 backdrop-blur-md rounded-2xl shadow-lg border border-gray-200 p-6 hidden xl:block">
+    <h3 class="font-bold text-gray-900 mb-4 flex items-center gap-2 text-sm uppercase tracking-wide">
+      <svg class="w-5 h-5 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 10h16M4 14h16M4 18h16"/>
+      </svg>
+      Contents
+    </h3>
+    <ul class="space-y-2">
+      {tocHeadings.map((heading) => (
+        <li>
+          <a 
+            href={`#${heading.slug}`}
+            class="block text-sm py-1.5 px-3 rounded-lg transition-all duration-200
+              {heading.depth === 3 ? 'ml-4 text-gray-600 hover:text-blue-600' : 'text-gray-700 font-medium hover:text-blue-600 hover:bg-blue-50'}
+              toc-link
+              {heading.depth === 2 ? 'toc-h2' : 'toc-h3'}"
+            data-slug={heading.slug}
+          >
+            {heading.text}
+          </a>
+        </li>
+      ))}
+    </ul>
+
+    <!-- Scroll to Top -->
+    <button 
+      id="scrollToTop"
+      class="mt-6 w-full py-2 px-4 bg-gray-100 hover:bg-blue-600 hover:text-white rounded-lg text-sm font-medium transition-colors flex items-center justify-center gap-2 opacity-0 invisible transition-opacity duration-300"
+      onclick="window.scrollTo({top: 0, behavior: 'smooth'})"
+    >
+      <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"/>
+      </svg>
+      Back to top
+    </button>
+  </nav>
+)}
+
+<!-- Mobile TOC Toggle -->
+{tocHeadings.length > 0 && (
+  <div class="xl:hidden mb-8">
+    <details class="card">
+      <summary class="flex items-center justify-between p-4 cursor-pointer font-bold text-gray-900">
+        <span class="flex items-center gap-2">
+          <svg class="w-5 h-5 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 10h16M4 14h16M4 18h16"/>
+          </svg>
+          Contents
+        </span>
+        <svg class="w-5 h-5 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+        </svg>
+      </summary>
+      <div class="p-4 pt-0">
+        <ul class="space-y-2 mt-4">
+          {tocHeadings.map((heading) => (
+            <li>
+              <a 
+                href={`#${heading.slug}`}
+                class="block text-sm py-2 px-3 rounded-lg transition-colors
+                  {heading.depth === 3 ? 'ml-4 text-gray-600' : 'text-gray-700 font-medium'}"
+              >
+                {heading.text}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </details>
+  </div>
+)}
+
+<script>
+  // 滚动高亮当前章节
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          const slug = entry.target.id;
+          document.querySelectorAll('.toc-link').forEach((link) => {
+            link.classList.remove('text-blue-600', 'bg-blue-50', 'font-semibold');
+            if (link.getAttribute('data-slug') === slug) {
+              link.classList.add('text-blue-600', 'bg-blue-50', 'font-semibold');
+            }
+          });
+
+          // 显示/隐藏回到顶部按钮
+          const scrollTopBtn = document.getElementById('scrollToTop');
+          if (window.scrollY > 500) {
+            scrollTopBtn?.classList.remove('opacity-0', 'invisible');
+          } else {
+            scrollTopBtn?.classList.add('opacity-0', 'invisible');
+          }
+        }
+      });
+    },
+    { rootMargin: '-20% 0px -80% 0px' }
+  );
+
+  // 观察所有标题
+  document.querySelectorAll('h2, h3').forEach((heading) => {
+    observer.observe(heading);
+  });
+
+  // 平滑滚动
+  document.querySelectorAll('.toc-link').forEach((link) => {
+    link.addEventListener('click', (e) => {
+      e.preventDefault();
+      const slug = link.getAttribute('data-slug');
+      const target = document.getElementById(slug!);
+      target?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+  });
+</script>
+
+<style>
+  .toc {
+    scrollbar-width: thin;
+    scrollbar-color: #e5e7eb transparent;
+  }
+  
+  .toc::-webkit-scrollbar {
+    width: 6px;
+  }
+  
+  .toc::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  
+  .toc::-webkit-scrollbar-thumb {
+    background-color: #e5e7eb;
+    border-radius: 3px;
+  }
+</style>

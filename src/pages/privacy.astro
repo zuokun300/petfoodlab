@@ -2,41 +2,165 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 
-<BaseLayout title="Privacy Policy">
-  <h1 class="text-4xl font-bold mb-8">Privacy Policy</h1>
-  
-  <div class="prose lg:prose-xl">
-    <p class="text-gray-600">Last updated: March 2026</p>
+<BaseLayout title="Privacy Policy - PetFoodLab">
+  <!-- Header -->
+  <section class="bg-gradient-to-r from-blue-600 to-blue-800 text-white py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h1 class="text-4xl md:text-5xl font-bold mb-4">Privacy Policy</h1>
+      <p class="text-xl text-blue-100 max-w-2xl mx-auto">
+        Last updated: March 2026
+      </p>
+    </div>
+  </section>
 
-    <h2>Information We Collect</h2>
-    <p>
-      We collect minimal information:
-    </p>
-    <ul>
-      <li>Website analytics (via Google Analytics)</li>
-      <li>Affiliate click tracking (to improve recommendations)</li>
-    </ul>
+  <!-- Content -->
+  <section class="py-16">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="prose prose-lg max-w-none">
+        <!-- Introduction -->
+        <div class="card p-8 mb-8">
+          <p class="text-gray-700 leading-relaxed">
+            At PetFoodLab, we take your privacy seriously. This Privacy Policy explains how we collect, 
+            use, and protect your personal information when you visit our website.
+          </p>
+        </div>
 
-    <h2>How We Use Information</h2>
-    <p>
-      We use this data to:
-    </p>
-    <ul>
-      <li>Improve our content and recommendations</li>
-      <li>Understand which reviews are most helpful</li>
-    </ul>
+        <!-- Information We Collect -->
+        <div class="mb-12">
+          <h2 class="text-3xl font-bold mb-6 flex items-center gap-3">
+            <span class="text-blue-600">1.</span>
+            Information We Collect
+          </h2>
+          
+          <div class="space-y-6">
+            <div class="card p-6">
+              <h3 class="text-xl font-bold mb-3">Website Analytics</h3>
+              <p class="text-gray-600 mb-3">We use Google Analytics to understand how visitors use our site. This includes:</p>
+              <ul class="list-disc list-inside space-y-2 text-gray-600 ml-4">
+                <li>Pages visited</li>
+                <li>Time spent on site</li>
+                <li>Referral source</li>
+                <li>Device and browser information</li>
+              </ul>
+              <p class="text-gray-600 mt-4 text-sm">This data is anonymized and cannot identify you personally.</p>
+            </div>
 
-    <h2>Third-Party Services</h2>
-    <ul>
-      <li>Google Analytics - analytics</li>
-      <li>Amazon Associates - affiliate links</li>
-      <li>Vercel - website hosting</li>
-    </ul>
+            <div class="card p-6">
+              <h3 class="text-xl font-bold mb-3">Affiliate Link Tracking</h3>
+              <p class="text-gray-600">
+                When you click on our affiliate links, we may receive a commission. We track clicks to understand 
+                which products interest our readers, but this data is not linked to your personal identity.
+              </p>
+            </div>
+          </div>
+        </div>
 
-    <h2>Contact</h2>
-    <p>
-      Questions about privacy? Contact us at 
-      <a href="mailto:privacy@petfoodlab.it.com" class="text-blue-600">privacy@petfoodlab.it.com</a>
-    </p>
-  </div>
+        <!-- How We Use Information -->
+        <div class="mb-12">
+          <h2 class="text-3xl font-bold mb-6 flex items-center gap-3">
+            <span class="text-blue-600">2.</span>
+            How We Use Information
+          </h2>
+          
+          <div class="card p-6">
+            <p class="text-gray-700 mb-4">We use the collected information to:</p>
+            <ul class="space-y-3">
+              <li class="flex items-start gap-3">
+                <span class="text-green-600 mt-1">✓</span>
+                <span class="text-gray-600">Improve our content and website experience</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="text-green-600 mt-1">✓</span>
+                <span class="text-gray-600">Understand which reviews are most helpful</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="text-green-600 mt-1">✓</span>
+                <span class="text-gray-600">Optimize our affiliate partnerships</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="text-green-600 mt-1">✓</span>
+                <span class="text-gray-600">Monitor website performance and security</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Third-Party Services -->
+        <div class="mb-12">
+          <h2 class="text-3xl font-bold mb-6 flex items-center gap-3">
+            <span class="text-blue-600">3.</span>
+            Third-Party Services
+          </h2>
+          
+          <div class="grid md:grid-cols-2 gap-6">
+            <div class="card p-6">
+              <h3 class="font-bold mb-2">Google Analytics</h3>
+              <p class="text-gray-600 text-sm">Website analytics and traffic analysis</p>
+              <a href="https://policies.google.com/privacy" class="text-blue-600 text-sm hover:underline mt-2 inline-block">Privacy Policy →</a>
+            </div>
+
+            <div class="card p-6">
+              <h3 class="font-bold mb-2">Amazon Associates</h3>
+              <p class="text-gray-600 text-sm">Affiliate link tracking and commissions</p>
+              <a href="https://affiliate-program.amazon.com/help/operating/privacy" class="text-blue-600 text-sm hover:underline mt-2 inline-block">Privacy Policy →</a>
+            </div>
+
+            <div class="card p-6">
+              <h3 class="font-bold mb-2">Vercel</h3>
+              <p class="text-gray-600 text-sm">Website hosting and performance</p>
+              <a href="https://vercel.com/legal/privacy-policy" class="text-blue-600 text-sm hover:underline mt-2 inline-block">Privacy Policy →</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Your Rights -->
+        <div class="mb-12">
+          <h2 class="text-3xl font-bold mb-6 flex items-center gap-3">
+            <span class="text-blue-600">4.</span>
+            Your Rights
+          </h2>
+          
+          <div class="card p-6">
+            <p class="text-gray-700 mb-4">You have the right to:</p>
+            <ul class="space-y-3">
+              <li class="flex items-start gap-3">
+                <span class="text-blue-600 mt-1">•</span>
+                <span class="text-gray-600">Request access to your personal data</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="text-blue-600 mt-1">•</span>
+                <span class="text-gray-600">Request correction of inaccurate data</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="text-blue-600 mt-1">•</span>
+                <span class="text-gray-600">Request deletion of your data</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="text-blue-600 mt-1">•</span>
+                <span class="text-gray-600">Opt-out of analytics tracking</span>
+              </li>
+            </ul>
+            <p class="text-gray-600 mt-6">
+              To exercise these rights, contact us at 
+              <a href="mailto:privacy@petfoodlab.it.com" class="text-blue-600 hover:underline">privacy@petfoodlab.it.com</a>
+            </p>
+          </div>
+        </div>
+
+        <!-- Contact -->
+        <div class="bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl p-8">
+          <h2 class="text-2xl font-bold mb-4">Questions About Privacy?</h2>
+          <p class="text-gray-700 mb-4">
+            If you have any questions about this Privacy Policy or our data practices, please contact us:
+          </p>
+          <a href="mailto:privacy@petfoodlab.it.com" class="text-blue-600 font-semibold hover:underline inline-flex items-center gap-2">
+            privacy@petfoodlab.it.com
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
 </BaseLayout>

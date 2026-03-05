@@ -3,21 +3,95 @@ import { getCollection } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 
 const posts = await getCollection('blog');
-
-// Sort by date descending
 posts.sort((a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime());
+
+const categories = [...new Set(posts.map(p => p.data.category))];
+
+// 分类图片映射
+const categoryImages = {
+  'Dog Food': '🐕',
+  'Cat Food': '🐱',
+  'Supplements': '💊',
+  'Guide': '📚',
+};
 ---
 
 <BaseLayout title="Pet Food Reviews & Guides - PetFoodLab">
-  <h1 class="text-4xl font-bold mb-8">All Reviews & Guides</h1>
-  
-  <div class="grid md:grid-cols-2 gap-6">
-    {posts.map((post) => (
-      <a href={`/blog/${post.id}`} class="block bg-white p-6 rounded-lg shadow hover:shadow-lg transition">
-        <span class="text-sm text-blue-600">{post.data.category}</span>
-        <h2 class="text-2xl font-semibold mt-2">{post.data.title}</h2>
-        <p class="text-gray-500 mt-2">{post.data.date}</p>
-      </a>
-    ))}
-  </div>
+  <!-- Header -->
+  <section class="bg-gradient-to-r from-blue-600 to-blue-800 text-white py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h1 class="text-4xl md:text-5xl font-bold mb-4">All Reviews & Guides</h1>
+      <p class="text-xl text-blue-100 max-w-2xl mx-auto">
+        Independent pet food reviews, buying guides, and expert recommendations
+      </p>
+    </div>
+  </section>
+
+  <!-- Content -->
+  <section class="py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <!-- Category Filter -->
+      <div class="flex flex-wrap gap-3 mb-12 justify-center">
+        <span class="btn-primary bg-blue-600 text-white">All ({posts.length})</span>
+        {categories.map((cat) => (
+          <span class="btn-secondary">
+            {cat}
+          </span>
+        ))}
+      </div>
+
+      <!-- Articles Grid -->
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {posts.map((post) => {
+          const emoji = categoryImages[post.data.category as keyof typeof categoryImages] || '🐾';
+          return (
+            <a href={`/blog/${post.id}`} class="group card overflow-hidden">
+              <!-- Featured Image -->
+              <div class="relative h-48 bg-gradient-to-br from-blue-100 to-blue-50 overflow-hidden">
+                <div class="absolute inset-0 flex items-center justify-center text-8xl group-hover:scale-110 transition-transform duration-500">
+                  {emoji}
+                </div>
+                <div class="absolute top-4 right-4">
+                  <span class="badge badge-blue text-xs">{post.data.category}</span>
+                </div>
+              </div>
+              
+              <!-- Content -->
+              <div class="p-6">
+                <!-- Date -->
+                <div class="flex items-center gap-2 text-gray-400 text-sm mb-3">
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+                  </svg>
+                  {post.data.date}
+                </div>
+
+                <!-- Title -->
+                <h2 class="text-xl font-bold group-hover:text-blue-600 transition-colors mb-4 line-clamp-2">
+                  {post.data.title}
+                </h2>
+
+                <!-- Read More -->
+                <div class="flex items-center gap-2 text-blue-600 font-semibold group-hover:gap-3 transition-all">
+                  Read Review
+                  <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
+                  </svg>
+                </div>
+              </div>
+            </a>
+          );
+        })}
+      </div>
+
+      <!-- Empty State -->
+      {posts.length === 0 && (
+        <div class="text-center py-20">
+          <div class="text-6xl mb-4">📝</div>
+          <h3 class="text-2xl font-bold mb-2">No articles yet</h3>
+          <p class="text-gray-600">Check back soon for new reviews!</p>
+        </div>
+      )}
+    </div>
+  </section>
 </BaseLayout>
