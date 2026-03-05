@@ -31,7 +31,7 @@ After testing 35+ dry dog food brands, here are our top picks for 2026:
 
 **Cons:** Premium price point
 
-[Check Price on Amazon →](https://www.amazon.com/s?k=orijen+cat+food&tag=zuokun300-21)
+[Check Price on Amazon →](https://www.amazon.com/s?k=orijen+dog+food&tag=zuokun300-21)
 
 ### 2. Acana Heritage - Best Value
 
@@ -39,7 +39,7 @@ After testing 35+ dry dog food brands, here are our top picks for 2026:
 
 **Cons:** Limited protein options
 
-[Check Price on Amazon →](https://www.amazon.com/s?k=orijen+cat+food&tag=zuokun300-21)
+[Check Price on Amazon →](https://www.amazon.com/s?k=orijen+dog+food&tag=zuokun300-21)
 
 ### 3. Hill's Science Diet Adult - Best Vet Recommended
 
@@ -47,7 +47,7 @@ After testing 35+ dry dog food brands, here are our top picks for 2026:
 
 **Cons:** Contains grains, lower meat content
 
-[Check Price on Amazon →](https://www.amazon.com/s?k=orijen+cat+food&tag=zuokun300-21)
+[Check Price on Amazon →](https://www.amazon.com/s?k=orijen+dog+food&tag=zuokun300-21)
 
 ### 4. Blue Buffalo Life Protection - Best Natural
 
@@ -55,7 +55,7 @@ After testing 35+ dry dog food brands, here are our top picks for 2026:
 
 **Cons:** Higher price, some dogs may not like the bits
 
-[Check Price on Amazon →](https://www.amazon.com/s?k=orijen+cat+food&tag=zuokun300-21)
+[Check Price on Amazon →](https://www.amazon.com/s?k=orijen+dog+food&tag=zuokun300-21)
 
 ### 5. Wellness CORE - Best Grain-Free
 
@@ -63,7 +63,7 @@ After testing 35+ dry dog food brands, here are our top picks for 2026:
 
 **Cons:** Premium price, may need gradual transition
 
-[Check Price on Amazon →](https://www.amazon.com/s?k=orijen+cat+food&tag=zuokun300-21)
+[Check Price on Amazon →](https://www.amazon.com/s?k=orijen+dog+food&tag=zuokun300-21)
 
 ## Buying Guide
 

@@ -74,7 +74,7 @@ We evaluate dog food based on:
   </div>
 </div>
 
-[Check Price on Amazon →](https://www.amazon.com/s?k=orijen+cat+food&tag=zuokun300-21)
+[Check Price on Amazon →](https://www.amazon.com/s?k=orijen+dog+food&tag=zuokun300-21)
 
 ---
 
@@ -105,7 +105,7 @@ We evaluate dog food based on:
   </div>
 </div>
 
-[Check Price on Amazon →](https://www.amazon.com/s?k=orijen+cat+food&tag=zuokun300-21)
+[Check Price on Amazon →](https://www.amazon.com/s?k=orijen+dog+food&tag=zuokun300-21)
 
 ---
 
@@ -136,7 +136,7 @@ We evaluate dog food based on:
   </div>
 </div>
 
-[Check Price on Amazon →](https://www.amazon.com/s?k=orijen+cat+food&tag=zuokun300-21)
+[Check Price on Amazon →](https://www.amazon.com/s?k=orijen+dog+food&tag=zuokun300-21)
 
 ---
 
@@ -167,7 +167,7 @@ We evaluate dog food based on:
   </div>
 </div>
 
-[Check Price on Amazon →](https://www.amazon.com/s?k=orijen+cat+food&tag=zuokun300-21)
+[Check Price on Amazon →](https://www.amazon.com/s?k=orijen+dog+food&tag=zuokun300-21)
 
 ---
 
@@ -198,7 +198,7 @@ We evaluate dog food based on:
   </div>
 </div>
 
-[Check Price on Amazon →](https://www.amazon.com/s?k=orijen+cat+food&tag=zuokun300-21)
+[Check Price on Amazon →](https://www.amazon.com/s?k=orijen+dog+food&tag=zuokun300-21)
 
 ---
 

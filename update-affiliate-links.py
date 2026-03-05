@@ -71,17 +71,23 @@ def update_article_links(file_path):
     # 从文章内容中推断品牌名
     content_lower = content.lower()
     detected_brands = []
-    for brand in BRAND_KEYWORDS.keys():
-        if brand.lower() in content_lower:
-            detected_brands.append(brand)
     
-    # 确定产品类型
+    # 确定产品类型（先于品牌检测，以便正确匹配关键词）
     if "cat" in content_lower:
         product_type = "cat+food"
     elif "dog" in content_lower:
         product_type = "dog+food"
     else:
         product_type = "pet+supplements"
+    
+    # 检测品牌（优先考虑与产品类型匹配的品牌）
+    for brand, keyword in BRAND_KEYWORDS.items():
+        if brand.lower() in content_lower:
+            # 如果关键词与产品类型匹配，优先添加
+            if product_type.replace('+', ' ') in keyword:
+                detected_brands.insert(0, brand)
+            else:
+                detected_brands.append(brand)
     
     # 替换链接 - 如果有多个品牌，使用通用搜索链接
     if detected_brands:
